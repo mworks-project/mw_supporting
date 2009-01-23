@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/Volume%20Texture%20Example
+END
+3dtest.c
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/Volume%20Texture%20Example/3dtest.c
+END
+3dtest.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/Volume%20Texture%20Example/3dtest.h
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/Volume%20Texture%20Example/.cvsignore
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/Volume%20Texture%20Example/Makefile
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/GL%20Example
+END
+gltest.c
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/GL%20Example/gltest.c
+END
+gltest.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/GL%20Example/gltest.h
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/GL%20Example/.cvsignore
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/GL%20Example/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/dicarlolab/MonkeyWorks/!svn/ver/2162/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/examples/GL%20Example/Makefile
+END

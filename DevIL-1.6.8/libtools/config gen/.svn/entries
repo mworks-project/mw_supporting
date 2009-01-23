@@ -1,0 +1,118 @@
+8
+
+dir
+3305
+https://svn6.cvsdude.com/dicarlolab/MonkeyWorks/trunk/MonkeyWorksMacRequirements/DevIL-1.6.8/libtools/config%20gen
+https://svn6.cvsdude.com/dicarlolab/MonkeyWorks
+
+
+
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+15980662-76f2-0310-8555-e334231c6679
+
+config gen.cpp
+file
+
+
+
+
+2008-12-12T03:30:38.000000Z
+59b0b1887633138e3213854091a5646b
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+
+config gen.vcproj
+file
+
+
+
+
+2008-12-12T03:30:38.000000Z
+5f7ef0bd33894d12a4f93dd31f43a41e
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+has-props
+
+config gen.dsp
+file
+
+
+
+
+2008-12-12T03:30:38.000000Z
+291fb92dd5115e010fea668de66b2d6a
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+
+config gen.sln
+file
+
+
+
+
+2008-12-12T03:30:38.000000Z
+535a08ce53f6a1ee69c6ec7fd5f2d13e
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+has-props
+
+CVS
+dir
+
+config gen.dsw
+file
+
+
+
+
+2008-12-12T03:30:38.000000Z
+f780bc8a86c095513faa5924fe5aea15
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+
+.cvsignore
+file
+
+
+
+
+2008-12-12T03:30:38.000000Z
+5ce06edfcda58c16aee56c17e2eb2685
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+
+config_gen.exe
+file
+
+
+
+
+2008-12-12T03:30:38.000000Z
+846e62cb999332e0a3699124b2768c0c
+2006-10-22T02:33:42.545151Z
+1176
+bkennedy
+has-props
+
