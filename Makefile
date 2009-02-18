@@ -33,15 +33,16 @@ staging-area:
 	mkdir -p $(STAGING_DIR)
 	mkdir -p $(INSTALL_DIR)/lib
 	mkdir -p $(INSTALL_DIR)/include
-	ln -s -f $(INSTALL_DIR)/lib $(STAGING_DIR)/lib
-	ln -s -f $(INSTALL_DIR)/include $(STAGING_DIR)/include
+	if test -d $(STAGING_DIR); then echo "No need to link lib"; else ln -s -f $(INSTALL_DIR)/lib $(STAGING_DIR)/lib; fi;
+	if test -d $(STAGING_DIR); then echo "No need to link include"; else ln -s -f $(INSTALL_DIR)/include $(STAGING_DIR)/include; fi;
 
 boost: staging-area monkeyworks-lib
-	if test -d $(STAGING_DIR)/boost-svn; \
-	then echo "No need to check out new boost copy" \
-	else svn co http://svn.boost.org/svn/boost/tags/release/Boost_1_36_0 $(STAGING_DIR)/boost-svn; \
+	if test -e $(STAGING_DIR)/boost-svn; \
+	then echo "No need to check out new boost copy"; \
+	else echo "Checking out a fresh copy"; \
+	svn co http://svn.boost.org/svn/boost/tags/release/Boost_1_36_0 $(STAGING_DIR)/boost-svn; \
+	fi;
 	cp boost_mw.patch $(STAGING_DIR)/boost-svn/;\
-	fi
 	cd $(STAGING_DIR)/boost-svn/; \
 	find ./ -name ".svn" -print | xargs rm -rf; \
 	patch -Np6 -f < boost_mw.patch; \
