@@ -165,7 +165,7 @@ lcms: staging-area z tiff jpeg monkeyworks-lib
 	rm -rf $(STAGING_DIR)/lcms
 
 clean-lcms: staging-area
-	(cd image_libs/$(LCMS); ./configure --prefix=$(INSTALL_DIR) --enable-static --disable-shared LDFLAGS=-L$(INSTALL_DIR)/lib CPPFLAGS=-I$(INSTALL_DIR)/include; make distclean) 
+#	(cd image_libs/$(LCMS); ./configure --prefix=$(INSTALL_DIR) --enable-static --disable-shared LDFLAGS=-L$(INSTALL_DIR)/lib CPPFLAGS=-I$(INSTALL_DIR)/include; make distclean) 
 	rm -f $(INSTALL_DIR)/bin/icc2ps
 	rm -f $(INSTALL_DIR)/bin/icclink
 	rm -f $(INSTALL_DIR)/bin/icctrans
