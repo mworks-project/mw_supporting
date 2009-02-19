@@ -33,8 +33,8 @@ staging-area:
 	mkdir -p $(STAGING_DIR)
 	mkdir -p $(INSTALL_DIR)/lib
 	mkdir -p $(INSTALL_DIR)/include
-	if test -d $(STAGING_DIR); then echo "No need to link lib"; else ln -s -f $(INSTALL_DIR)/lib $(STAGING_DIR)/lib; fi;
-	if test -d $(STAGING_DIR); then echo "No need to link include"; else ln -s -f $(INSTALL_DIR)/include $(STAGING_DIR)/include; fi;
+	if test -e $(STAGING_DIR)/lib; then echo "No need to link lib"; else ln -s -f $(INSTALL_DIR)/lib $(STAGING_DIR)/lib; fi;
+	if test -e $(STAGING_DIR)/include; then echo "No need to link include"; else ln -s -f $(INSTALL_DIR)/include $(STAGING_DIR)/include; fi;
 
 boost: staging-area monkeyworks-lib
 	if test -e $(STAGING_DIR)/boost-svn; \
@@ -160,7 +160,7 @@ clean-png:
 	
 
 lcms: staging-area z tiff jpeg monkeyworks-lib
-	(cd image_libs/$(LCMS); ./configure --prefix=$(STAGING_DIR)/lcms --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make; make check; make install) 
+	(cd image_libs/$(LCMS); ./configure --prefix=$(STAGING_DIR)/lcms --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make clean; make; make check; make install) 
 	rsync -av $(STAGING_DIR)/lcms/ $(INSTALL_DIR)/
 	rm -rf $(STAGING_DIR)/lcms
 
@@ -204,7 +204,7 @@ mng-makefile: image_libs/$(MNG)/makefiles/makefile.unix
 	sed s:/ltmp/lcms-1.06/source:$(STAGING_DIR)/include: image_libs/$(MNG)/Makefile2.tmp > image_libs/$(MNG)/Makefile
 
 DevIL: staging-area z mng tiff jpeg lcms png monkeyworks-lib
-	(cd $(DEVIL); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make; make install)
+	(cd $(DEVIL); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make clean; make; make install)
 
 clean-DevIL: staging-area
 	(cd $(DEVIL); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make distclean)
@@ -226,9 +226,8 @@ jpeg: staging-area monkeyworks-lib
 	ln -sf `which glibtool` image_libs/$(JPEG)/libtool
 	mkdir -p $(STAGING_DIR)/jpeg/include
 	mkdir -p $(STAGING_DIR)/jpeg/lib
-	(cd image_libs/$(JPEG); ./configure --prefix=$(STAGING_DIR)/jpeg --enable-static --disable-shared; make; make install-lib) 
+	(cd image_libs/$(JPEG); ./configure --prefix=$(STAGING_DIR)/jpeg --enable-static --disable-shared; make clean; make; make install-lib) 
 	rsync -av $(STAGING_DIR)/jpeg/ $(INSTALL_DIR)/
-	rm -rf $(STAGING_DIR)/jpeg
 
 clean-jpeg:
 	(cd image_libs/$(JPEG); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared; make distclean) 
@@ -243,9 +242,9 @@ clean-jpeg:
 clean: clean-cppunit clean-boost clean-ILUT 
 
 tiff: staging-area jpeg z monkeyworks-lib
-	(cd image_libs/$(TIFF); ./configure -prefix=$(STAGING_DIR)/tiff --enable-static --with-zlib-include-dir=$(STAGING_DIR)/zlib/include --with-zlib-lib-dir=$(STAGING_DIR)/zlib/lib --with-jpeg-include-dir=$(STAGING_DIR)/include --with-jpeg-lib-dir=$(STAGING_DIR)/lib --with-apple-opengl-framework; make; make install) 
+	(cd image_libs/$(TIFF); ./configure -prefix=$(STAGING_DIR)/tiff --enable-static --with-zlib-include-dir=$(STAGING_DIR)/zlib/include --with-zlib-lib-dir=$(STAGING_DIR)/zlib/lib --with-jpeg-include-dir=$(STAGING_DIR)/include --with-jpeg-lib-dir=$(STAGING_DIR)/lib --with-apple-opengl-framework; make clean; make; make install) 
 	rsync -av $(STAGING_DIR)/tiff/ $(INSTALL_DIR)/
-	rm -rf $(STAGING_DIR)/tiff
+	#rm -rf $(STAGING_DIR)/tiff
 
 clean-tiff:
 	(cd image_libs/$(TIFF); ./configure --prefix=$(INSTALL_DIR); make distclean) 

@@ -1,4 +1,0 @@
-altivec_common.lo altivec_common.o: altivec_common.c \
-  ../../include/IL/config.h
-
-../../include/IL/config.h:
