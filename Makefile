@@ -27,7 +27,7 @@ monkeyworks-lib:
 	mkdir -p $(INSTALL_DIR)/../Configuration
 	mkdir -p $(INSTALL_DIR)/../Scripting/Matlab
 	mkdir -p $(INSTALL_DIR)/../Scripting/Python
-	mkdir -p $(INSTALL_DIR)/../Developer/Tests
+	mkdir -p $(INSTALL_DIR)/../Developer/tests
 
 staging-area:
 	mkdir -p $(STAGING_DIR)
