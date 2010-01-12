@@ -10,6 +10,35 @@ LCMS=lcms-1.15
 MNG=libmng-1.0.9
 DEVIL=DevIL-1.6.8
 
+BASE_SDK=/Developer/SDKs/MacOSX10.6.sdk
+
+# CPP_GLOBAL="cpp-4.2 "
+# CC_GLOBAL="gcc-4.2 -arch i386 -arch x86_64 -isysroot=$(BASE_SDK) "
+# CXX_GLOBAL="g++-4.2 -arch i386 -arch x86_64 -isysroot=$(BASE_SDK) "
+# LDFLAGS_GLOBAL="-I/usr/lib -L$(STAGING_DIR)/lib "
+# CFLAGS_GLOBAL="-I/usr/include -I$(STAGING_DIR)/include "
+
+CPP_GLOBAL="/usr/bin/cpp-4.0 "
+CC_GLOBAL="/usr/bin/gcc-4.0 "
+CXX_GLOBAL="/usr/bin/g++-4.0 "
+
+LDFLAGS_32="-Wl,-syslibroot,$(BASE_SDK) -arch i386 -I/usr/lib  -L$(STAGING_DIR)/lib"
+CFLAGS_32="-isysroot $(BASE_SDK) -arch i386 -I/usr/include -I$(STAGING_DIR)/include"
+
+LDFLAGS_64="-Wl,-syslibroot,$(BASE_SDK)  -arch x86_64 -I/usr/lib  -L$(STAGING_DIR)/lib"
+CFLAGS_64="-isysroot $(BASE_SDK)  -arch x86_64 -I/usr/include -I$(STAGING_DIR)/include"
+
+
+
+#CPPFLAGS_GLOBAL="-isysroot=$(BASE_SDK) "
+
+CONFIGURE_FLAGS_GENERIC=--enable-shared=no --disable-shared --enable-static=yes
+CONFIGURE_FLAGS_32=CPPFLAGS=$(CFLAGS_32) LDFLAGS=$(LDFLAGS_32) CXX=$(CXX_GLOBAL) CC=$(CC_GLOBAL) --prefix=$(STAGING_DIR)/i386 $(CONFIGURE_FLAGS_GENERIC)
+CONFIGURE_FLAGS_64=CPPFLAGS=$(CFLAGS_64) LDFLAGS=$(LDFLAGS_64) CXX=$(CXX_GLOBAL) CC=$(CC_GLOBAL) --prefix=$(STAGING_DIR)/x86_64 $(CONFIGURE_FLAGS_GENERIC)
+CONFIGURE_FLAGS=$(CONFIGURE_FLAGS_64)
+
+CONFIGURE_AND_MAKE_32_64=./configure $(CONFIGURE_FLAGS_32); make clean; make; make install; ./configure $(CONFIGURE_FLAGS_64); make clean; make; make install
+
 # Boost options
 BJAM=./tools/jam/src/bin.macosxx86/bjam
 BJAM_CONFIG="--layout=system"
@@ -56,9 +85,10 @@ clean-boost:
 	rm -rf $(INSTALL_DIR)/lib/libboost_*
 
 cppunit: monkeyworks-lib
-	(cd $(CPPUNIT); ./configure --prefix=$(STAGING_DIR)/cppunit; make; make install)
-	rsync -av --exclude *.dylib $(STAGING_DIR)/cppunit/ $(INSTALL_DIR)/
-	rm -rf $(STAGING_DIR)/cppunit
+	(cd $(CPPUNIT); $(CONFIGURE_AND_MAKE_32_64) )
+	lipo -arch i386 $(STAGING_DIR)/i386/libcppunit.a -arch x86_64 $(STAGING_DIR)/x86_64/libcppunit.a -create -output $(INSTALL_DIR)/libcppunit.a 
+#	rsync -av --exclude *.dylib $(STAGING_DIR)/cppunit/ $(INSTALL_DIR)/
+#	rm -rf $(STAGING_DIR)/cppunit
 
 clean-cppunit:
 	(cd $(CPPUNIT); ./configure --prefix=$(INSTALL_DIR); make distclean)
@@ -128,8 +158,10 @@ clean-ILUT: clean-z clean-jpeg clean-tiff clean-mng clean-lcms clean-png clean-D
 
 
 z: monkeyworks-lib
-	(cd image_libs/$(ZLIB); ./configure --prefix=$(STAGING_DIR)/zlib; make; make install) 
-	rsync -av $(STAGING_DIR)/zlib/ $(INSTALL_DIR)/
+	(cd $(ZLIB); $(CONFIGURE_AND_MAKE_32_64) )
+	lipo -arch i386 $(STAGING_DIR)/i386/libz.a -arch x86_64 $(STAGING_DIR)/x86_64/libz.a -create -output $(INSTALL_DIR)/libz.a
+#	(cd image_libs/$(ZLIB); ./configure --prefix=$(STAGING_DIR)/zlib CFLAGS=$(CFLAGS_GLOBAL) LDFLAGS=$(LDFLAGS_GLOBAL); make; make install) 
+#	rsync -av $(STAGING_DIR)/zlib/ $(INSTALL_DIR)/
 	rm -rf $(STAGING_DIR)/zlib
 
 clean-z:
@@ -142,7 +174,7 @@ clean-z:
 
 
 png: z monkeyworks-lib
-	(cd image_libs/$(PNG); ./configure --prefix=$(STAGING_DIR)/png --enable-static --enable-shared=no; make; make check; make install) 
+	(cd image_libs/$(PNG); $(CONFIGURE_AND_MAKE_32_64)) 
 	rsync -av $(STAGING_DIR)/png/ $(INSTALL_DIR)/
 	rm -rf $(STAGING_DIR)/png
 
@@ -160,12 +192,12 @@ clean-png:
 	
 
 lcms: staging-area z tiff jpeg monkeyworks-lib
-	(cd image_libs/$(LCMS); ./configure --prefix=$(STAGING_DIR)/lcms --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make clean; make; make check; make install) 
+	(cd image_libs/$(LCMS); $(CONFIGURE_AND_MAKE_32_64)) 
 	rsync -av $(STAGING_DIR)/lcms/ $(INSTALL_DIR)/
 	rm -rf $(STAGING_DIR)/lcms
 
 clean-lcms: staging-area
-#	(cd image_libs/$(LCMS); ./configure --prefix=$(INSTALL_DIR) --enable-static --disable-shared LDFLAGS=-L$(INSTALL_DIR)/lib CPPFLAGS=-I$(INSTALL_DIR)/include; make distclean) 
+#	(cd image_libs/$(LCMS); ./configure --prefix=$(INSTALL_DIR) --enable-static --disable-shared LDFLAGS=$(LDFLAGS_GLOBAL) CPPFLAGS=$(CFLAGS_GLOBAL); make distclean) 
 	rm -f $(INSTALL_DIR)/bin/icc2ps
 	rm -f $(INSTALL_DIR)/bin/icclink
 	rm -f $(INSTALL_DIR)/bin/icctrans
@@ -204,10 +236,10 @@ mng-makefile: image_libs/$(MNG)/makefiles/makefile.unix
 	sed s:/ltmp/lcms-1.06/source:$(STAGING_DIR)/include: image_libs/$(MNG)/Makefile2.tmp > image_libs/$(MNG)/Makefile
 
 DevIL: staging-area z mng tiff jpeg lcms png monkeyworks-lib
-	(cd $(DEVIL); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make clean; make; make install)
+	(cd $(DEVIL); $(CONFIGURE_AND_MAKE_32_64))
 
 clean-DevIL: staging-area
-	(cd $(DEVIL); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared LDFLAGS=-L$(STAGING_DIR)/lib CPPFLAGS=-I$(STAGING_DIR)/include; make distclean)
+	(cd $(DEVIL); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared LDFLAGS=$(LDFLAGS_GLOBAL) CPPFLAGS=$(CFLAGS_GLOBAL); make distclean)
 	rm -f $(INSTALL_DIR)/include/IL/config.h
 	rm -f $(INSTALL_DIR)/include/IL/devil_internal_exports.h
 	rm -f $(INSTALL_DIR)/include/IL/il.h
@@ -226,8 +258,8 @@ jpeg: staging-area monkeyworks-lib
 	ln -sf `which glibtool` image_libs/$(JPEG)/libtool
 	mkdir -p $(STAGING_DIR)/jpeg/include
 	mkdir -p $(STAGING_DIR)/jpeg/lib
-	(cd image_libs/$(JPEG); ./configure --prefix=$(STAGING_DIR)/jpeg --enable-static --disable-shared; make clean; make; make install-lib) 
-	rsync -av $(STAGING_DIR)/jpeg/ $(INSTALL_DIR)/
+	(cd image_libs/$(JPEG); $(CONFIGURE_AND_MAKE_32_64))# make install-lib) 
+#	rsync -av $(STAGING_DIR)/jpeg/ $(INSTALL_DIR)/
 
 clean-jpeg:
 	(cd image_libs/$(JPEG); ./configure --prefix=$(STAGING_DIR) --enable-static --disable-shared; make distclean) 
@@ -242,8 +274,8 @@ clean-jpeg:
 clean: clean-cppunit clean-boost clean-ILUT 
 
 tiff: staging-area jpeg z monkeyworks-lib
-	(cd image_libs/$(TIFF); ./configure -prefix=$(STAGING_DIR)/tiff --enable-static --with-zlib-include-dir=$(STAGING_DIR)/zlib/include --with-zlib-lib-dir=$(STAGING_DIR)/zlib/lib --with-jpeg-include-dir=$(STAGING_DIR)/include --with-jpeg-lib-dir=$(STAGING_DIR)/lib --with-apple-opengl-framework; make clean; make; make install) 
-	rsync -av $(STAGING_DIR)/tiff/ $(INSTALL_DIR)/
+	(cd image_libs/$(TIFF); ./configure -prefix=$(STAGING_DIR)/tiff --enable-static --with-zlib-include-dir=$(STAGING_DIR)/zlib/include --with-zlib-lib-dir=$(STAGING_DIR)/zlib/lib --with-jpeg-include-dir=$(STAGING_DIR)/include --with-jpeg-lib-dir=$(STAGING_DIR)/lib --with-apple-opengl-framework CPPFLAGS=$(CFLAGS_GLOBAL) LDFLAGS=$(LDFLAGS_GLOBAL); make clean; make; make install) 
+#	rsync -av $(STAGING_DIR)/tiff/ $(INSTALL_DIR)/
 	#rm -rf $(STAGING_DIR)/tiff
 
 clean-tiff:
