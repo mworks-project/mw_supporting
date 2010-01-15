@@ -1,0 +1,222 @@
+<HTML><HEAD><TITLE></TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<BR><BR><FONT COLOR="#000066"><H1><A NAME="//apple_ref/occ/cl/NRTPlot">NRTPlot</A></H1></FONT><BR>
+
+
+
+	<blockquote><DL><DT><B>Inherits From:</B></DT>  
+	<DD>NRTPlotObject</DD>
+</DL></blockquote>
+
+
+
+	<blockquote><DL><DT><B>Conforms To:</B></DT>
+	<DD>NRTPlotAreaComponent</DD>
+</DL></blockquote>
+
+
+	<blockquote><DL><DT><B>Declared In:</B></DT>
+	<DD>NRTPlot.h</DD>
+	</DL></blockquote>
+
+<BR><BR>
+
+
+<H2>Class Description</H2>
+
+NRTPlot.h 
+Narrative<P>
+
+Abstract class representing a single plot in a plot area.<P>
+
+Created by Drew McCormack on Thu Jan 01 1970. 
+Copyright (c) 1970 __MyCompanyName__. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Variables</H2>
+	<blockquote>
+	
+		<CODE>id <B>_dataSource</B>;</CODE><BR>
+		<CODE>NSObject &lt;NSCopying&gt; *<B>_identifier</B>;</CODE><BR>
+		<CODE>NRTDataClusterGraphic *<B>_clusterGraphic</B>;</CODE><BR>
+		<CODE>NRTTransform *<B>_coordinatesToViewTransform</B>;</CODE><BR>
+	<P><TABLE>
+	
+		<TR><TD>_dataSource</TD><TD>No description.</TD></TR>
+	
+		<TR><TD>_identifier</TD><TD>No description.</TD></TR>
+	
+		<TR><TD>_clusterGraphic</TD><TD>No description.</TD></TR>
+	
+		<TR><TD>_coordinatesToViewTransform</TD><TD>No description.</TD></TR>
+	
+	</TABLE>
+	</blockquote>
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Method Types</H2>
+	<blockquote>
+	
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- initWithIdentifier:andDataSource:">- initWithIdentifier:andDataSource:</A></DD>
+		
+			<DD> <A HREF="#- init">- init</A></DD>
+		
+			<DD> <A HREF="#- dealloc">- dealloc</A></DD>
+		
+		</DL>
+	
+		
+			Abstract.
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- drawInPlotView:">- drawInPlotView:</A></DD>
+		
+			<DD> <A HREF="#- setIdentifier:">- setIdentifier:</A></DD>
+		
+			<DD> <A HREF="#- identifier">- identifier</A></DD>
+		
+			<DD> <A HREF="#- setDataSource:">- setDataSource:</A></DD>
+		
+			<DD> <A HREF="#- dataSource">- dataSource</A></DD>
+		
+			<DD> <A HREF="#- dataSourceIsSetupToAllowDrawing">- dataSourceIsSetupToAllowDrawing</A></DD>
+		
+			<DD> <A HREF="#- setClusterGraphic:">- setClusterGraphic:</A></DD>
+		
+			<DD> <A HREF="#- clusterGraphic">- clusterGraphic</A></DD>
+		
+			<DD> <A HREF="#- setCoordinatesToViewTransform:">- setCoordinatesToViewTransform:</A></DD>
+		
+			<DD> <A HREF="#- coordinatesToViewTransform">- coordinatesToViewTransform</A></DD>
+		
+		</DL>
+	
+	</blockquote>
+
+
+
+
+ 
+
+	<HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Methods</H2>
+ 
+	
+		
+		<A NAME="- clusterGraphic"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/clusterGraphic">clusterGraphic</A></H3><P>
+		<CODE>- (NRTDataClusterGraphic *)<B>clusterGraphic</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- coordinatesToViewTransform"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/coordinatesToViewTransform">coordinatesToViewTransform</A></H3><P>
+		<CODE>- (NRTTransform *)<B>coordinatesToViewTransform</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- dataSource"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/dataSource">dataSource</A></H3><P>
+		<CODE>- (id)<B>dataSource</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- dataSourceIsSetupToAllowDrawing"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/dataSourceIsSetupToAllowDrawing">dataSourceIsSetupToAllowDrawing</A></H3><P>
+		<CODE>- (BOOL)<B>dataSourceIsSetupToAllowDrawing</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- dealloc"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/dealloc">dealloc</A></H3><P>
+		<CODE>- (void)<B>dealloc</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- drawInPlotView:"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/drawInPlotView:">drawInPlotView:</A></H3><P>
+		<CODE>- (void)<B>drawInPlotView:</B>(NRTPlotView *)<EM>view</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- identifier"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/identifier">identifier</A></H3><P>
+		<CODE>- (NSObject &lt;NSCopying&gt; *)<B>identifier</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- init"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/init">init</A></H3><P>
+		<CODE>- (id)<B>init</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- initWithIdentifier:andDataSource:"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/initWithIdentifier:andDataSource:">initWithIdentifier:andDataSource:</A></H3><P>
+		<CODE>- (id)<B>initWithIdentifier:</B>(NSObject &lt;NSCopying&gt; *)<EM>identifier</EM> <B>andDataSource:</B>(id)<EM>dataSource</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setClusterGraphic:"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/setClusterGraphic:">setClusterGraphic:</A></H3><P>
+		<CODE>- (void)<B>setClusterGraphic:</B>(NRTDataClusterGraphic *)<EM>graphic</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setCoordinatesToViewTransform:"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/setCoordinatesToViewTransform:">setCoordinatesToViewTransform:</A></H3><P>
+		<CODE>- (void)<B>setCoordinatesToViewTransform:</B>(NRTTransform *)<EM>transform</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setDataSource:"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/setDataSource:">setDataSource:</A></H3><P>
+		<CODE>- (void)<B>setDataSource:</B>(id)<EM>ds</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setIdentifier:"></A><H3><A NAME="//apple_ref/occ/instm/NRTPlot/setIdentifier:">setIdentifier:</A></H3><P>
+		<CODE>- (void)<B>setIdentifier:</B>(NSObject &lt;NSCopying&gt; *)<EM>ident</EM>
+			
+		</CODE><P>
+		No method description.
+	
+
+
+
+
+<P><HR>
+Version 1.1 Copyright &copy;2003.  All Rights Reserved.  
+<P>
+</BODY></HTML>

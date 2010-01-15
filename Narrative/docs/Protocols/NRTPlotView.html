@@ -1,0 +1,251 @@
+<HTML><HEAD><TITLE></TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<BR><BR><FONT COLOR="#000066"><H1><A NAME="//apple_ref/occ/intf/NRTPlotViewComponent">NRTPlotViewComponent</A></H1></FONT><BR>
+
+
+
+
+
+
+
+	<blockquote><DL><DT><B>Declared In:</B></DT>
+	<DD>NRTPlotView.h</DD>
+	</DL></blockquote>
+
+<BR><BR>
+
+
+<H2>Protocol Description</H2>
+
+NRTPlotView.h 
+Narrative<P>
+
+This class basically keeps track of things which need to be drawn on 
+it, and calls those objects to draw when drawRect: is called. 
+TODO: Add layering. Give each component a layer number to indictate 
+where it is in the layering scheme.<P>
+
+Created by Drew McCormack on Sat Aug 10 2002. 
+Copyright (c) 2002 __MyCompanyName__. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Method Types</H2>
+	<blockquote>
+	
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- initWithFrame:">- initWithFrame:</A></DD>
+		
+			<DD> <A HREF="#- dealloc">- dealloc</A></DD>
+		
+		</DL>
+	
+		
+			Accessors
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- setComponentArray:">- setComponentArray:</A></DD>
+		
+			<DD> <A HREF="#- componentArray">- componentArray</A></DD>
+		
+			<DD> <A HREF="#- setBackgroundColor:">- setBackgroundColor:</A></DD>
+		
+			<DD> <A HREF="#- backgroundColor">- backgroundColor</A></DD>
+		
+		</DL>
+	
+		
+			Adding and removing components
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- addComponent:">- addComponent:</A></DD>
+		
+			<DD> <A HREF="#- removeAllComponents">- removeAllComponents</A></DD>
+		
+		</DL>
+	
+		
+			TODO: 
+-(NSObject &lt;NRTPlotViewComponent&gt; *)componentWithIdentifier:(<B>id</B>)componentId; 
+-(void)removeComponentWithIdentifier:(<B>id</B>)componentId;
+		
+		<DL><DT></DT>
+		
+		</DL>
+	
+		
+			Drawing
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- drawRect:">- drawRect:</A></DD>
+		
+			<DD> <A HREF="#- isOpaque">- isOpaque</A></DD>
+		
+		</DL>
+	
+		
+			layout methods
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- setNeedsLayout:">- setNeedsLayout:</A></DD>
+		
+			<DD> <A HREF="#- needsLayout">- needsLayout</A></DD>
+		
+			<DD> <A HREF="#- layout">- layout</A></DD>
+		
+		</DL>
+	
+		
+			Optimizing drawing through caching
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- setUseImageCache:">- setUseImageCache:</A></DD>
+		
+			<DD> <A HREF="#- useImageCache">- useImageCache</A></DD>
+		
+		</DL>
+	
+	</blockquote>
+
+
+
+
+ 
+
+	<HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Methods</H2>
+ 
+	
+		
+		<A NAME="- addComponent:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/addComponent:">addComponent:</A></H3><P>
+		<CODE>- (void)<B>addComponent:</B>(NSObject &lt;NRTPlotViewComponent&gt; *)<EM>component</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- backgroundColor"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/backgroundColor">backgroundColor</A></H3><P>
+		<CODE>- (NSColor *)<B>backgroundColor</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- componentArray"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/componentArray">componentArray</A></H3><P>
+		<CODE>- (NSMutableArray *)<B>componentArray</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- dealloc"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/dealloc">dealloc</A></H3><P>
+		<CODE>- (void)<B>dealloc</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- drawRect:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/drawRect:">drawRect:</A></H3><P>
+		<CODE>- (void)<B>drawRect:</B>(NSRect)<EM>rect</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- initWithFrame:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/initWithFrame:">initWithFrame:</A></H3><P>
+		<CODE>- (id)<B>initWithFrame:</B>(NSRect)<EM>frame</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- isOpaque"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/isOpaque">isOpaque</A></H3><P>
+		<CODE>- (BOOL)<B>isOpaque</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- layout"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/layout">layout</A></H3><P>
+		<CODE>- (void)<B>layout</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- needsLayout"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/needsLayout">needsLayout</A></H3><P>
+		<CODE>- (BOOL)<B>needsLayout</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- removeAllComponents"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/removeAllComponents">removeAllComponents</A></H3><P>
+		<CODE>- (void)<B>removeAllComponents</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setBackgroundColor:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/setBackgroundColor:">setBackgroundColor:</A></H3><P>
+		<CODE>- (void)<B>setBackgroundColor:</B>(NSColor *)<EM>color</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setComponentArray:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/setComponentArray:">setComponentArray:</A></H3><P>
+		<CODE>- (void)<B>setComponentArray:</B>(NSMutableArray *)<EM>array</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setNeedsLayout:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/setNeedsLayout:">setNeedsLayout:</A></H3><P>
+		<CODE>- (void)<B>setNeedsLayout:</B>(BOOL)<EM>needsLayout</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setUseImageCache:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/setUseImageCache:">setUseImageCache:</A></H3><P>
+		<CODE>- (void)<B>setUseImageCache:</B>(BOOL)<EM>useCache</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- useImageCache"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotViewComponent/useImageCache">useImageCache</A></H3><P>
+		<CODE>- (BOOL)<B>useImageCache</B>
+		</CODE><P>
+		No method description.
+	
+
+
+
+
+<P><HR>
+Version 1.1 Copyright &copy;2003.  All Rights Reserved.  
+<P>
+</BODY></HTML>

@@ -1,0 +1,174 @@
+<HTML><HEAD><TITLE></TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<BR><BR><FONT COLOR="#000066"><H1><A NAME="//apple_ref/occ/intf/NRTPlotAreaComponent">NRTPlotAreaComponent</A></H1></FONT><BR>
+
+
+
+
+
+
+
+	<blockquote><DL><DT><B>Declared In:</B></DT>
+	<DD>NRTPlotArea.h</DD>
+	</DL></blockquote>
+
+<BR><BR>
+
+
+<H2>Protocol Description</H2>
+
+NRTPlotArea.h 
+Narrative<P>
+
+This is an NSView where the plots are drawn, but also 
+converts plotting coordinates to NSView coordinates. 
+This particular class represents a rectangular area filling 
+the entire NSView area. By subclassing you can make more exotic 
+areas, like circles, by clipping drawing to a given area, and 
+changing the coordinates-to-view transform.<P>
+
+Created by Drew McCormack on Sat May 25 2002. 
+Copyright (c) 2002 __MyCompanyName__. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Method Types</H2>
+	<blockquote>
+	
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- initWithFrame:">- initWithFrame:</A></DD>
+		
+			<DD> <A HREF="#- dealloc">- dealloc</A></DD>
+		
+			<DD> <A HREF="#- setPlotCoordinateToViewTransform:">- setPlotCoordinateToViewTransform:</A></DD>
+		
+			<DD> <A HREF="#- plotCoordinateToViewTransform">- plotCoordinateToViewTransform</A></DD>
+		
+		</DL>
+	
+		
+			Sets the components coords-to-view transform, and as well as 
+adding the component to the NRTPlotView's list.
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- addPlotAreaComponent:">- addPlotAreaComponent:</A></DD>
+		
+			<DD> <A HREF="#- removeAllComponents">- removeAllComponents</A></DD>
+		
+			<DD> <A HREF="#- plotAreaComponents">- plotAreaComponents</A></DD>
+		
+			<DD> <A HREF="#- setPlotAreaComponents:">- setPlotAreaComponents:</A></DD>
+		
+		</DL>
+	
+		
+			Transforms to NSView coordinates from plotting coordinates.
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- plotViewPointForPlotCoordinates:">- plotViewPointForPlotCoordinates:</A></DD>
+		
+		</DL>
+	
+	</blockquote>
+
+
+
+
+ 
+
+	<HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Methods</H2>
+ 
+	
+		
+		<A NAME="- addPlotAreaComponent:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/addPlotAreaComponent:">addPlotAreaComponent:</A></H3><P>
+		<CODE>- (void)<B>addPlotAreaComponent:</B>(NSObject &lt;NRTPlotAreaComponent&gt; *)<EM>component</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- dealloc"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/dealloc">dealloc</A></H3><P>
+		<CODE>- (void)<B>dealloc</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- initWithFrame:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/initWithFrame:">initWithFrame:</A></H3><P>
+		<CODE>- (id)<B>initWithFrame:</B>(NSRect)<EM>frame</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- plotAreaComponents"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/plotAreaComponents">plotAreaComponents</A></H3><P>
+		<CODE>- (NSMutableArray *)<B>plotAreaComponents</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- plotCoordinateToViewTransform"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/plotCoordinateToViewTransform">plotCoordinateToViewTransform</A></H3><P>
+		<CODE>- (NRTTransform *)<B>plotCoordinateToViewTransform</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- plotViewPointForPlotCoordinates:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/plotViewPointForPlotCoordinates:">plotViewPointForPlotCoordinates:</A></H3><P>
+		<CODE>- (NSPoint)<B>plotViewPointForPlotCoordinates:</B>(NSDictionary *)<EM>coords</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- removeAllComponents"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/removeAllComponents">removeAllComponents</A></H3><P>
+		<CODE>- (void)<B>removeAllComponents</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setPlotAreaComponents:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/setPlotAreaComponents:">setPlotAreaComponents:</A></H3><P>
+		<CODE>- (void)<B>setPlotAreaComponents:</B>(NSMutableArray *)<EM>components</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setPlotCoordinateToViewTransform:"></A><H3><A NAME="//apple_ref/occ/intfm/NRTPlotAreaComponent/setPlotCoordinateToViewTransform:">setPlotCoordinateToViewTransform:</A></H3><P>
+		<CODE>- (void)<B>setPlotCoordinateToViewTransform:</B>(NRTTransform *)<EM>trans</EM>
+			
+		</CODE><P>
+		No method description.
+	
+
+
+
+
+<P><HR>
+Version 1.1 Copyright &copy;2003.  All Rights Reserved.  
+<P>
+</BODY></HTML>
