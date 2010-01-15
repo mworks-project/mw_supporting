@@ -163,6 +163,11 @@ def lipo_gnu_build(project_name, search_string, configure_options="", **kwargs):
         
     i386_environment = ["CC=%s" % gcc_path, "CXXFLAGS=\"-arch i386 %s %s\"" % (cflags, opt_cflags), "CFLAGS=\"-arch i386 %s %s\"" % (cflags, opt_cflags),  "LDFLAGS=\"-arch i386 %s\"" % (cflags)]
     x86_64_environment = ["CC=%s" % gcc_path, "CXXFLAGS=\"-arch x86_64 %s %s\"" % (cflags, opt_cflags), "CFLAGS=\"-arch x86_64 %s %s\"" % (cflags, opt_cflags), "LDFLAGS=\"-arch x86_64 %s\"" % (cflags)]
+
+    if 'environment_variables' in kwargs:
+        extra_environment = kwargs.pop('environment_variables')
+        i386_environment.extend(extra_environment)
+        x86_64_environment.extend(extra_environment)
     
     i386_target = "%s/%s/i386" % (staging_root, project_name)
     x86_64_target = "%s/%s/x86_64" % (staging_root, project_name)
@@ -213,18 +218,18 @@ def build_boost(project_name, python_version):
     system_call("rm -f CMakeCache.txt")
     
     if(manual_lipo):
-        system_call("cmake -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"i386\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (staging_root, gcc_path, gplusplus_path, sdk))
+        system_call("cmake -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"i386\" -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=\"%s\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (staging_root, gcc_path, gplusplus_path, sdk, sdk))
         system_call("make -k", None, False)
         i386_dir = "%s/%s/lib_i386" % (staging_root, project_name)
         system_call("rm -rf %s" % i386_dir)
         system_call("mv %s/%s/lib %s" % (staging_root, project_name, i386_dir))
     
-        system_call("cmake -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"x86_64\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (staging_root, gcc_path, gplusplus_path, sdk))
+        system_call("cmake -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"x86_64\" -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=\"%s\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (staging_root, gcc_path, gplusplus_path, sdk, sdk))
         x86_64_dir = "%s/%s/lib_x86_64" % (staging_root, project_name)
         system_call("rm -rf %s" % x86_64_dir)
         system_call("mv %s/%s/lib %s" % (staging_root, project_name, x86_64_dir))
     else:
-        os.system("cmake -DPYTHON_EXECUTABLE:PATH=/usr/bin/python%s -DPYTHON_INCLUDE_PATH:PATH=/System/Library/Frameworks/Python.framework/Versions/%s/Headers -DPYTHON_LIBRARY:PATH=\"-F /System/Library/Frameworks -framework Python\" -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"i386;x86_64\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (python_version, python_version, staging_root, gcc_path, gplusplus_path, sdk))
+        os.system("cmake -DPYTHON_EXECUTABLE:PATH=/usr/bin/python%s -DPYTHON_INCLUDE_PATH:PATH=/System/Library/Frameworks/Python.framework/Versions/%s/Headers -DPYTHON_LIBRARY:PATH=\"-F /System/Library/Frameworks -framework Python\" -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"i386;x86_64\" -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=\"%s\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (python_version, python_version, staging_root, gcc_path, gplusplus_path, sdk, sdk))
         system_call("make -k", None, False)
     
     target_dir = "%s/lib" % (staging_root)
@@ -250,7 +255,7 @@ def build_libtiff():
     # Why does libtiff's build infrastructure suck so hard?
     
     libtiff_configure_flags = "--prefix=%s --enable-static --disable-shared --disable-dependency-tracking --disable-cxx  --with-apple-opengl-framework" % (staging_root)
-    combined_environment = ["CC=%s" % gcc_path, "CFLAGS=\"-arch i386 -arch x86_64 %s %s\"" % (cflags, opt_cflags)]
+    combined_environment = ["CC=%s" % gcc_path, "CFLAGS=\"-arch i386 -arch x86_64 %s %s\"" % (cflags, opt_cflags), "LDFLAGS=\"-arch i386 -arch x86_64 %s\"" % (cflags)]
 
     gnu_build("tiff", libtiff_configure_flags, combined_environment, lame_config=False, make_calls="make; make install")
     
@@ -275,8 +280,8 @@ lipo_gnu_build("png", "\.a", "--enable-static --disable-shared", lame_config=Tru
 
 nuke_project("jpeg")
 copy_project("jpeg-6b", "jpeg")
-system_call("ln -s /usr/bin/glibtool %s/jpeg/libtool" % staging_root)
-lipo_gnu_build("jpeg", "\.a", "--enable-static --disable-shared", lame_config=True, make_calls="make clean; make; make install-lib")
+#system_call("ln -s /usr/bin/glibtool %s/jpeg/libtool" % staging_root)
+lipo_gnu_build("jpeg", "\.a", "--disable-static --disable-shared", lame_config=True, make_calls="make clean; make; make install-lib")
 
 nuke_project("lcms")
 copy_project("lcms-1.15", "lcms")
@@ -292,7 +297,7 @@ build_libtiff()
 
 nuke_project("devil")
 copy_project("DevIL-1.6.8", "devil")
-lipo_gnu_build("devil", "\.a", "--enable-static --disable-shared --enable-opengl --disable-directx8 --disable-directx9 --disable-win32 --disable-sdl --disable-allegro --with-tiffdir=%s --with-pngdir=%s --with-mngdir=%s --with-lcmsdir=%s --with-zdir=%s --with-jpegdir=%s" % (staging_root, staging_root, staging_root, staging_root, staging_root, staging_root), lame_config=True)
+lipo_gnu_build("devil", "\.a", "--enable-static --disable-shared --enable-opengl --disable-directx8 --disable-directx9 --disable-win32 --disable-sdl --disable-allegro --with-tiffdir=%s --with-pngdir=%s --with-mngdir=%s --with-lcmsdir=%s --with-zdir=%s --with-jpegdir=%s" % (staging_root, staging_root, staging_root, staging_root, staging_root, staging_root), lame_config=True, environment_variables=['CPATH=%s/include' % staging_root])
 
 nuke_project("cppunit")
 copy_project("cppunit-1.12.0", "cppunit")
