@@ -36,7 +36,7 @@ This will clone / update the external patched boost library.  Longer term, we ma
 
 We use a completely unmodified version of DevIL.  However, since we've had problems with breakage across versions, and because DevIL is nowhere as "standard" as boost, we chose to host it here.
 
-#### Image Librarys (libtiff, libjpeg, etc. etc.) ####
+#### Image Libraries (libtiff, libjpeg, etc. etc.) ####
 
 These libraries are extremely standard, and we may eventually transition to a check-out-and-build strategy; however, because the libraries are small (and because they were already in the repository when we transitioned to git), we currently include copies of the appropriate versions in the repository.
 
