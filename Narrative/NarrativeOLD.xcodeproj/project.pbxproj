@@ -1,0 +1,1034 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		089C1668FE841158C02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		3ABCDF850464377900000003 /* NRTExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABCDF830464377900000003 /* NRTExceptions.h */; };
+		3ABCDF860464377900000003 /* NRTExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCDF840464377900000003 /* NRTExceptions.m */; };
+		5CC7A6D410687171000CD68D /* ChartDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F52B8617033DFF7C01A80102 /* ChartDefaults.plist */; };
+		5CC7A6D710687174000CD68D /* Narrative-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7A6C610687137000CD68D /* Narrative-Info.plist */; };
+		5CC7A6D910687175000CD68D /* NRTAffineTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8603033DFF7801A80102 /* NRTAffineTransform.h */; };
+		5CC7A6DA10687176000CD68D /* NRTAffineTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8604033DFF7801A80102 /* NRTAffineTransform.m */; };
+		5CC7A6DB10687177000CD68D /* NRTAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8605033DFF7801A80102 /* NRTAnnotation.h */; };
+		5CC7A6DC10687179000CD68D /* NRTAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8606033DFF7801A80102 /* NRTAnnotation.m */; };
+		5CC7A6DD1068717A000CD68D /* NRTAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8607033DFF7801A80102 /* NRTAxis.h */; };
+		5CC7A6DE1068717B000CD68D /* NRTAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8608033DFF7801A80102 /* NRTAxis.m */; };
+		5CC7A6DF1068717B000CD68D /* NRTAxisLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8609033DFF7801A80102 /* NRTAxisLabel.h */; };
+		5CC7A6E01068717C000CD68D /* NRTAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B860A033DFF7801A80102 /* NRTAxisLabel.m */; };
+		5CC7A6E11068717D000CD68D /* NRTAxisTick.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B860B033DFF7801A80102 /* NRTAxisTick.h */; };
+		5CC7A6E21068717E000CD68D /* NRTAxisTick.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B860C033DFF7901A80102 /* NRTAxisTick.m */; };
+		5CC7A6E310687180000CD68D /* NRTAxisTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B860D033DFF7901A80102 /* NRTAxisTitle.h */; };
+		5CC7A6E410687181000CD68D /* NRTAxisTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B860E033DFF7A01A80102 /* NRTAxisTitle.m */; };
+		5CC7A6E510687181000CD68D /* NRTBarClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B860F033DFF7A01A80102 /* NRTBarClusterGraphic.h */; };
+		5CC7A6E610687182000CD68D /* NRTBarClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8610033DFF7B01A80102 /* NRTBarClusterGraphic.m */; };
+		5CC7A6E710687183000CD68D /* NRTChainedTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8611033DFF7C01A80102 /* NRTChainedTransform.h */; };
+		5CC7A6E810687183000CD68D /* NRTChainedTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8612033DFF7C01A80102 /* NRTChainedTransform.m */; };
+		5CC7A6E910687184000CD68D /* NRTChart.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8613033DFF7C01A80102 /* NRTChart.h */; };
+		5CC7A6EA10687186000CD68D /* NRTChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8614033DFF7C01A80102 /* NRTChart.m */; };
+		5CC7A6EB10687187000CD68D /* NRTChartAttributeStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8616033DFF7C01A80102 /* NRTChartAttributeStrings.m */; };
+		5CC7A6EC10687187000CD68D /* NRTChartAttributeStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8615033DFF7C01A80102 /* NRTChartAttributeStrings.h */; };
+		5CC7A6ED10687188000CD68D /* NRTCompositeTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8619033DFF7C01A80102 /* NRTCompositeTransform.m */; };
+		5CC7A6EE10687189000CD68D /* NRTCompositeTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8618033DFF7C01A80102 /* NRTCompositeTransform.h */; };
+		5CC7A6EF1068718A000CD68D /* NRTCoordinateIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B861A033DFF7C01A80102 /* NRTCoordinateIdentifiers.h */; };
+		5CC7A6F01068718B000CD68D /* NRTCoordinateIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B861B033DFF7C01A80102 /* NRTCoordinateIdentifiers.m */; };
+		5CC7A6F11068718C000CD68D /* NRTDataClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B861C033DFF7C01A80102 /* NRTDataClusterGraphic.h */; };
+		5CC7A6F21068718E000CD68D /* NRTDataClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B861D033DFF7C01A80102 /* NRTDataClusterGraphic.m */; };
+		5CC7A6F31068718F000CD68D /* NRTDataClusterIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B861E033DFF7C01A80102 /* NRTDataClusterIdentifiers.h */; };
+		5CC7A6F410687190000CD68D /* NRTDataClusterIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B861F033DFF7C01A80102 /* NRTDataClusterIdentifiers.m */; };
+		5CC7A6F510687190000CD68D /* NRTDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8620033DFF7C01A80102 /* NRTDefines.h */; };
+		5CC7A6F610687191000CD68D /* NRTDiscretizer.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C1A05034ECDCB01A80102 /* NRTDiscretizer.h */; };
+		5CC7A6F710687192000CD68D /* NRTDiscretizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F54C1A06034ECDCB01A80102 /* NRTDiscretizer.m */; };
+		5CC7A6F810687194000CD68D /* NRTExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABCDF830464377900000003 /* NRTExceptions.h */; };
+		5CC7A6F910687195000CD68D /* NRTExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCDF840464377900000003 /* NRTExceptions.m */; };
+		5CC7A6FA10687196000CD68D /* NRTFloatRange.c in Sources */ = {isa = PBXBuildFile; fileRef = F52B8621033DFF7C01A80102 /* NRTFloatRange.c */; };
+		5CC7A6FB10687196000CD68D /* NRTFloatRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8622033DFF7C01A80102 /* NRTFloatRange.h */; };
+		5CC7A6FC10687197000CD68D /* NRTFloatRangeDiscretizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F54C1A0A034ED03301A80102 /* NRTFloatRangeDiscretizer.m */; };
+		5CC7A6FD10687198000CD68D /* NRTFloatRangeDiscretizer.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C1A09034ED03301A80102 /* NRTFloatRangeDiscretizer.h */; };
+		5CC7A6FE10687199000CD68D /* NRTGeneralIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8623033DFF7C01A80102 /* NRTGeneralIdentifiers.h */; };
+		5CC7A6FF1068719B000CD68D /* NRTGeneralIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8624033DFF7C01A80102 /* NRTGeneralIdentifiers.m */; };
+		5CC7A7001068719D000CD68D /* NRTIrreducibleTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8625033DFF7C01A80102 /* NRTIrreducibleTransform.h */; };
+		5CC7A7011068719E000CD68D /* NRTIrreducibleTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8626033DFF7C01A80102 /* NRTIrreducibleTransform.m */; };
+		5CC7A7021068719F000CD68D /* NRTLinear1DTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8627033DFF7C01A80102 /* NRTLinear1DTransform.h */; };
+		5CC7A703106871A0000CD68D /* NRTLinear1DTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8628033DFF7D01A80102 /* NRTLinear1DTransform.m */; };
+		5CC7A704106871A2000CD68D /* NRTOHLCClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8629033DFF7E01A80102 /* NRTOHLCClusterGraphic.h */; };
+		5CC7A705106871A2000CD68D /* NRTOHLCClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B862A033DFF7E01A80102 /* NRTOHLCClusterGraphic.m */; };
+		5CC7A706106871A4000CD68D /* NRTOrthogonalTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B862B033DFF7E01A80102 /* NRTOrthogonalTransform.h */; };
+		5CC7A707106871A5000CD68D /* NRTOrthogonalTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B862C033DFF7E01A80102 /* NRTOrthogonalTransform.m */; };
+		5CC7A708106871A6000CD68D /* NRTPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B862D033DFF7E01A80102 /* NRTPlot.h */; };
+		5CC7A709106871A7000CD68D /* NRTPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B862E033DFF7E01A80102 /* NRTPlot.m */; };
+		5CC7A70A106871A8000CD68D /* NRTPlotArea.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B862F033DFF7E01A80102 /* NRTPlotArea.h */; };
+		5CC7A70B106871AA000CD68D /* NRTPlotArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8630033DFF7E01A80102 /* NRTPlotArea.m */; };
+		5CC7A70C106871AA000CD68D /* NRTPlotAreaComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8631033DFF7E01A80102 /* NRTPlotAreaComponent.h */; };
+		5CC7A70D106871AB000CD68D /* NRTPlotDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8634033DFF7E01A80102 /* NRTPlotDataSource.h */; };
+		5CC7A70E106871AC000CD68D /* NRTPlotObject.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8635033DFF7E01A80102 /* NRTPlotObject.h */; };
+		5CC7A70F106871AC000CD68D /* NRTPlotView.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8637033DFF7E01A80102 /* NRTPlotView.h */; };
+		5CC7A710106871AD000CD68D /* NRTPlotObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8636033DFF7E01A80102 /* NRTPlotObject.m */; };
+		5CC7A711106871AE000CD68D /* NRTPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8638033DFF7E01A80102 /* NRTPlotView.m */; };
+		5CC7A712106871AF000CD68D /* NRTPlotViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8639033DFF7E01A80102 /* NRTPlotViewAnnotation.h */; };
+		5CC7A713106871B0000CD68D /* NRTPlotViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B863A033DFF7E01A80102 /* NRTPlotViewAnnotation.m */; };
+		5CC7A714106871B1000CD68D /* NRTPlotViewComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B863B033DFF7E01A80102 /* NRTPlotViewComponent.h */; };
+		5CC7A715106871B3000CD68D /* NRTScatterPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B863C033DFF7E01A80102 /* NRTScatterPlot.h */; };
+		5CC7A716106871B3000CD68D /* NRTScatterPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B863D033DFF7E01A80102 /* NRTScatterPlot.m */; };
+		5CC7A717106871B4000CD68D /* NRTStraightAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8640033DFF7E01A80102 /* NRTStraightAxis.h */; };
+		5CC7A718106871B6000CD68D /* NRTStraightAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8641033DFF7E01A80102 /* NRTStraightAxis.m */; };
+		5CC7A719106871B7000CD68D /* NRTStraightTick.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8642033DFF7E01A80102 /* NRTStraightTick.h */; };
+		5CC7A71A106871B7000CD68D /* NRTStraightTick.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8643033DFF7E01A80102 /* NRTStraightTick.m */; };
+		5CC7A71B106871B8000CD68D /* NRTSymbolClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8644033DFF7E01A80102 /* NRTSymbolClusterGraphic.h */; };
+		5CC7A71C106871B9000CD68D /* NRTSymbolClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8645033DFF7E01A80102 /* NRTSymbolClusterGraphic.m */; };
+		5CC7A71D106871B9000CD68D /* NRTTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8646033DFF7E01A80102 /* NRTTransform.h */; };
+		5CC7A71E106871BA000CD68D /* NRTTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8647033DFF7F01A80102 /* NRTTransform.m */; };
+		5CC7A71F106871BB000CD68D /* NRTXYChart.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8648033DFF8001A80102 /* NRTXYChart.h */; };
+		5CC7A720106871BD000CD68D /* NRTXYChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8649033DFF8001A80102 /* NRTXYChart.m */; };
+		5CC7A721106871BE000CD68D /* XYChartDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F52B864A033DFF8101A80102 /* XYChartDefaults.plist */; };
+		F52B864B033DFF8101A80102 /* NRTAffineTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8603033DFF7801A80102 /* NRTAffineTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B864C033DFF8101A80102 /* NRTAffineTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8604033DFF7801A80102 /* NRTAffineTransform.m */; };
+		F52B864D033DFF8101A80102 /* NRTAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8605033DFF7801A80102 /* NRTAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B864E033DFF8101A80102 /* NRTAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8606033DFF7801A80102 /* NRTAnnotation.m */; };
+		F52B864F033DFF8101A80102 /* NRTAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8607033DFF7801A80102 /* NRTAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8650033DFF8101A80102 /* NRTAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8608033DFF7801A80102 /* NRTAxis.m */; };
+		F52B8651033DFF8101A80102 /* NRTAxisLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8609033DFF7801A80102 /* NRTAxisLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8652033DFF8101A80102 /* NRTAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B860A033DFF7801A80102 /* NRTAxisLabel.m */; };
+		F52B8653033DFF8101A80102 /* NRTAxisTick.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B860B033DFF7801A80102 /* NRTAxisTick.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8654033DFF8101A80102 /* NRTAxisTick.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B860C033DFF7901A80102 /* NRTAxisTick.m */; };
+		F52B8655033DFF8101A80102 /* NRTAxisTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B860D033DFF7901A80102 /* NRTAxisTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8656033DFF8101A80102 /* NRTAxisTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B860E033DFF7A01A80102 /* NRTAxisTitle.m */; };
+		F52B8657033DFF8101A80102 /* NRTBarClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B860F033DFF7A01A80102 /* NRTBarClusterGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8658033DFF8101A80102 /* NRTBarClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8610033DFF7B01A80102 /* NRTBarClusterGraphic.m */; };
+		F52B8659033DFF8101A80102 /* NRTChainedTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8611033DFF7C01A80102 /* NRTChainedTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B865A033DFF8101A80102 /* NRTChainedTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8612033DFF7C01A80102 /* NRTChainedTransform.m */; };
+		F52B865B033DFF8101A80102 /* NRTChart.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8613033DFF7C01A80102 /* NRTChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B865C033DFF8101A80102 /* NRTChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8614033DFF7C01A80102 /* NRTChart.m */; };
+		F52B865D033DFF8101A80102 /* NRTChartAttributeStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8615033DFF7C01A80102 /* NRTChartAttributeStrings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B865E033DFF8101A80102 /* NRTChartAttributeStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8616033DFF7C01A80102 /* NRTChartAttributeStrings.m */; };
+		F52B865F033DFF8101A80102 /* ChartDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F52B8617033DFF7C01A80102 /* ChartDefaults.plist */; };
+		F52B8660033DFF8101A80102 /* NRTCompositeTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8618033DFF7C01A80102 /* NRTCompositeTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8661033DFF8101A80102 /* NRTCompositeTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8619033DFF7C01A80102 /* NRTCompositeTransform.m */; };
+		F52B8662033DFF8101A80102 /* NRTCoordinateIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B861A033DFF7C01A80102 /* NRTCoordinateIdentifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8663033DFF8101A80102 /* NRTCoordinateIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B861B033DFF7C01A80102 /* NRTCoordinateIdentifiers.m */; };
+		F52B8664033DFF8101A80102 /* NRTDataClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B861C033DFF7C01A80102 /* NRTDataClusterGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8665033DFF8101A80102 /* NRTDataClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B861D033DFF7C01A80102 /* NRTDataClusterGraphic.m */; };
+		F52B8666033DFF8101A80102 /* NRTDataClusterIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B861E033DFF7C01A80102 /* NRTDataClusterIdentifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8667033DFF8101A80102 /* NRTDataClusterIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B861F033DFF7C01A80102 /* NRTDataClusterIdentifiers.m */; };
+		F52B8668033DFF8101A80102 /* NRTDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8620033DFF7C01A80102 /* NRTDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8669033DFF8101A80102 /* NRTFloatRange.c in Sources */ = {isa = PBXBuildFile; fileRef = F52B8621033DFF7C01A80102 /* NRTFloatRange.c */; };
+		F52B866A033DFF8101A80102 /* NRTFloatRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8622033DFF7C01A80102 /* NRTFloatRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B866B033DFF8101A80102 /* NRTGeneralIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8623033DFF7C01A80102 /* NRTGeneralIdentifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B866C033DFF8101A80102 /* NRTGeneralIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8624033DFF7C01A80102 /* NRTGeneralIdentifiers.m */; };
+		F52B866D033DFF8101A80102 /* NRTIrreducibleTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8625033DFF7C01A80102 /* NRTIrreducibleTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B866E033DFF8101A80102 /* NRTIrreducibleTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8626033DFF7C01A80102 /* NRTIrreducibleTransform.m */; };
+		F52B866F033DFF8101A80102 /* NRTLinear1DTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8627033DFF7C01A80102 /* NRTLinear1DTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8670033DFF8101A80102 /* NRTLinear1DTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8628033DFF7D01A80102 /* NRTLinear1DTransform.m */; };
+		F52B8671033DFF8101A80102 /* NRTOHLCClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8629033DFF7E01A80102 /* NRTOHLCClusterGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8672033DFF8101A80102 /* NRTOHLCClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B862A033DFF7E01A80102 /* NRTOHLCClusterGraphic.m */; };
+		F52B8673033DFF8101A80102 /* NRTOrthogonalTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B862B033DFF7E01A80102 /* NRTOrthogonalTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8674033DFF8101A80102 /* NRTOrthogonalTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B862C033DFF7E01A80102 /* NRTOrthogonalTransform.m */; };
+		F52B8675033DFF8101A80102 /* NRTPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B862D033DFF7E01A80102 /* NRTPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8676033DFF8101A80102 /* NRTPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B862E033DFF7E01A80102 /* NRTPlot.m */; };
+		F52B8677033DFF8101A80102 /* NRTPlotArea.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B862F033DFF7E01A80102 /* NRTPlotArea.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8678033DFF8101A80102 /* NRTPlotArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8630033DFF7E01A80102 /* NRTPlotArea.m */; };
+		F52B8679033DFF8101A80102 /* NRTPlotAreaComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8631033DFF7E01A80102 /* NRTPlotAreaComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B867C033DFF8101A80102 /* NRTPlotDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8634033DFF7E01A80102 /* NRTPlotDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B867D033DFF8101A80102 /* NRTPlotObject.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8635033DFF7E01A80102 /* NRTPlotObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B867E033DFF8101A80102 /* NRTPlotObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8636033DFF7E01A80102 /* NRTPlotObject.m */; };
+		F52B867F033DFF8101A80102 /* NRTPlotView.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8637033DFF7E01A80102 /* NRTPlotView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8680033DFF8101A80102 /* NRTPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8638033DFF7E01A80102 /* NRTPlotView.m */; };
+		F52B8681033DFF8101A80102 /* NRTPlotViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8639033DFF7E01A80102 /* NRTPlotViewAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8682033DFF8101A80102 /* NRTPlotViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B863A033DFF7E01A80102 /* NRTPlotViewAnnotation.m */; };
+		F52B8683033DFF8101A80102 /* NRTPlotViewComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B863B033DFF7E01A80102 /* NRTPlotViewComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8684033DFF8101A80102 /* NRTScatterPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B863C033DFF7E01A80102 /* NRTScatterPlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8685033DFF8101A80102 /* NRTScatterPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B863D033DFF7E01A80102 /* NRTScatterPlot.m */; };
+		F52B8688033DFF8101A80102 /* NRTStraightAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8640033DFF7E01A80102 /* NRTStraightAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8689033DFF8101A80102 /* NRTStraightAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8641033DFF7E01A80102 /* NRTStraightAxis.m */; };
+		F52B868A033DFF8101A80102 /* NRTStraightTick.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8642033DFF7E01A80102 /* NRTStraightTick.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B868B033DFF8101A80102 /* NRTStraightTick.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8643033DFF7E01A80102 /* NRTStraightTick.m */; };
+		F52B868C033DFF8101A80102 /* NRTSymbolClusterGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8644033DFF7E01A80102 /* NRTSymbolClusterGraphic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B868D033DFF8101A80102 /* NRTSymbolClusterGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8645033DFF7E01A80102 /* NRTSymbolClusterGraphic.m */; };
+		F52B868E033DFF8101A80102 /* NRTTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8646033DFF7E01A80102 /* NRTTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B868F033DFF8101A80102 /* NRTTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8647033DFF7F01A80102 /* NRTTransform.m */; };
+		F52B8690033DFF8101A80102 /* NRTXYChart.h in Headers */ = {isa = PBXBuildFile; fileRef = F52B8648033DFF8001A80102 /* NRTXYChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F52B8691033DFF8101A80102 /* NRTXYChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F52B8649033DFF8001A80102 /* NRTXYChart.m */; };
+		F52B8692033DFF8101A80102 /* XYChartDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F52B864A033DFF8101A80102 /* XYChartDefaults.plist */; };
+		F54C1A07034ECDCB01A80102 /* NRTDiscretizer.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C1A05034ECDCB01A80102 /* NRTDiscretizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F54C1A08034ECDCB01A80102 /* NRTDiscretizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F54C1A06034ECDCB01A80102 /* NRTDiscretizer.m */; };
+		F54C1A0B034ED03301A80102 /* NRTFloatRangeDiscretizer.h in Headers */ = {isa = PBXBuildFile; fileRef = F54C1A09034ED03301A80102 /* NRTFloatRangeDiscretizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F54C1A0C034ED03301A80102 /* NRTFloatRangeDiscretizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F54C1A0A034ED03301A80102 /* NRTFloatRangeDiscretizer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3ABCDF830464377900000003 /* NRTExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRTExceptions.h; sourceTree = "<group>"; };
+		3ABCDF840464377900000003 /* NRTExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRTExceptions.m; sourceTree = "<group>"; };
+		5CC7A6C510687137000CD68D /* Narrative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Narrative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC7A6C610687137000CD68D /* Narrative-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Narrative-Info.plist"; sourceTree = "<group>"; };
+		F52B8603033DFF7801A80102 /* NRTAffineTransform.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTAffineTransform.h; sourceTree = "<group>"; };
+		F52B8604033DFF7801A80102 /* NRTAffineTransform.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTAffineTransform.m; sourceTree = "<group>"; };
+		F52B8605033DFF7801A80102 /* NRTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTAnnotation.h; sourceTree = "<group>"; };
+		F52B8606033DFF7801A80102 /* NRTAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTAnnotation.m; sourceTree = "<group>"; };
+		F52B8607033DFF7801A80102 /* NRTAxis.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTAxis.h; sourceTree = "<group>"; };
+		F52B8608033DFF7801A80102 /* NRTAxis.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTAxis.m; sourceTree = "<group>"; };
+		F52B8609033DFF7801A80102 /* NRTAxisLabel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTAxisLabel.h; sourceTree = "<group>"; };
+		F52B860A033DFF7801A80102 /* NRTAxisLabel.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTAxisLabel.m; sourceTree = "<group>"; };
+		F52B860B033DFF7801A80102 /* NRTAxisTick.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTAxisTick.h; sourceTree = "<group>"; };
+		F52B860C033DFF7901A80102 /* NRTAxisTick.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTAxisTick.m; sourceTree = "<group>"; };
+		F52B860D033DFF7901A80102 /* NRTAxisTitle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTAxisTitle.h; sourceTree = "<group>"; };
+		F52B860E033DFF7A01A80102 /* NRTAxisTitle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTAxisTitle.m; sourceTree = "<group>"; };
+		F52B860F033DFF7A01A80102 /* NRTBarClusterGraphic.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTBarClusterGraphic.h; sourceTree = "<group>"; };
+		F52B8610033DFF7B01A80102 /* NRTBarClusterGraphic.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTBarClusterGraphic.m; sourceTree = "<group>"; };
+		F52B8611033DFF7C01A80102 /* NRTChainedTransform.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTChainedTransform.h; sourceTree = "<group>"; };
+		F52B8612033DFF7C01A80102 /* NRTChainedTransform.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTChainedTransform.m; sourceTree = "<group>"; };
+		F52B8613033DFF7C01A80102 /* NRTChart.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTChart.h; sourceTree = "<group>"; };
+		F52B8614033DFF7C01A80102 /* NRTChart.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTChart.m; sourceTree = "<group>"; };
+		F52B8615033DFF7C01A80102 /* NRTChartAttributeStrings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTChartAttributeStrings.h; sourceTree = "<group>"; };
+		F52B8616033DFF7C01A80102 /* NRTChartAttributeStrings.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTChartAttributeStrings.m; sourceTree = "<group>"; };
+		F52B8617033DFF7C01A80102 /* ChartDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = ChartDefaults.plist; sourceTree = "<group>"; };
+		F52B8618033DFF7C01A80102 /* NRTCompositeTransform.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTCompositeTransform.h; sourceTree = "<group>"; };
+		F52B8619033DFF7C01A80102 /* NRTCompositeTransform.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTCompositeTransform.m; sourceTree = "<group>"; };
+		F52B861A033DFF7C01A80102 /* NRTCoordinateIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTCoordinateIdentifiers.h; sourceTree = "<group>"; };
+		F52B861B033DFF7C01A80102 /* NRTCoordinateIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTCoordinateIdentifiers.m; sourceTree = "<group>"; };
+		F52B861C033DFF7C01A80102 /* NRTDataClusterGraphic.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTDataClusterGraphic.h; sourceTree = "<group>"; };
+		F52B861D033DFF7C01A80102 /* NRTDataClusterGraphic.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTDataClusterGraphic.m; sourceTree = "<group>"; };
+		F52B861E033DFF7C01A80102 /* NRTDataClusterIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTDataClusterIdentifiers.h; sourceTree = "<group>"; };
+		F52B861F033DFF7C01A80102 /* NRTDataClusterIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTDataClusterIdentifiers.m; sourceTree = "<group>"; };
+		F52B8620033DFF7C01A80102 /* NRTDefines.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTDefines.h; sourceTree = "<group>"; };
+		F52B8621033DFF7C01A80102 /* NRTFloatRange.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = NRTFloatRange.c; sourceTree = "<group>"; };
+		F52B8622033DFF7C01A80102 /* NRTFloatRange.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTFloatRange.h; sourceTree = "<group>"; };
+		F52B8623033DFF7C01A80102 /* NRTGeneralIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTGeneralIdentifiers.h; sourceTree = "<group>"; };
+		F52B8624033DFF7C01A80102 /* NRTGeneralIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTGeneralIdentifiers.m; sourceTree = "<group>"; };
+		F52B8625033DFF7C01A80102 /* NRTIrreducibleTransform.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTIrreducibleTransform.h; sourceTree = "<group>"; };
+		F52B8626033DFF7C01A80102 /* NRTIrreducibleTransform.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTIrreducibleTransform.m; sourceTree = "<group>"; };
+		F52B8627033DFF7C01A80102 /* NRTLinear1DTransform.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTLinear1DTransform.h; sourceTree = "<group>"; };
+		F52B8628033DFF7D01A80102 /* NRTLinear1DTransform.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTLinear1DTransform.m; sourceTree = "<group>"; };
+		F52B8629033DFF7E01A80102 /* NRTOHLCClusterGraphic.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTOHLCClusterGraphic.h; sourceTree = "<group>"; };
+		F52B862A033DFF7E01A80102 /* NRTOHLCClusterGraphic.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTOHLCClusterGraphic.m; sourceTree = "<group>"; };
+		F52B862B033DFF7E01A80102 /* NRTOrthogonalTransform.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTOrthogonalTransform.h; sourceTree = "<group>"; };
+		F52B862C033DFF7E01A80102 /* NRTOrthogonalTransform.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTOrthogonalTransform.m; sourceTree = "<group>"; };
+		F52B862D033DFF7E01A80102 /* NRTPlot.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlot.h; sourceTree = "<group>"; };
+		F52B862E033DFF7E01A80102 /* NRTPlot.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTPlot.m; sourceTree = "<group>"; };
+		F52B862F033DFF7E01A80102 /* NRTPlotArea.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlotArea.h; sourceTree = "<group>"; };
+		F52B8630033DFF7E01A80102 /* NRTPlotArea.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTPlotArea.m; sourceTree = "<group>"; };
+		F52B8631033DFF7E01A80102 /* NRTPlotAreaComponent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlotAreaComponent.h; sourceTree = "<group>"; };
+		F52B8634033DFF7E01A80102 /* NRTPlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlotDataSource.h; sourceTree = "<group>"; };
+		F52B8635033DFF7E01A80102 /* NRTPlotObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlotObject.h; sourceTree = "<group>"; };
+		F52B8636033DFF7E01A80102 /* NRTPlotObject.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTPlotObject.m; sourceTree = "<group>"; };
+		F52B8637033DFF7E01A80102 /* NRTPlotView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlotView.h; sourceTree = "<group>"; };
+		F52B8638033DFF7E01A80102 /* NRTPlotView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTPlotView.m; sourceTree = "<group>"; };
+		F52B8639033DFF7E01A80102 /* NRTPlotViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlotViewAnnotation.h; sourceTree = "<group>"; };
+		F52B863A033DFF7E01A80102 /* NRTPlotViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTPlotViewAnnotation.m; sourceTree = "<group>"; };
+		F52B863B033DFF7E01A80102 /* NRTPlotViewComponent.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTPlotViewComponent.h; sourceTree = "<group>"; };
+		F52B863C033DFF7E01A80102 /* NRTScatterPlot.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTScatterPlot.h; sourceTree = "<group>"; };
+		F52B863D033DFF7E01A80102 /* NRTScatterPlot.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTScatterPlot.m; sourceTree = "<group>"; };
+		F52B8640033DFF7E01A80102 /* NRTStraightAxis.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTStraightAxis.h; sourceTree = "<group>"; };
+		F52B8641033DFF7E01A80102 /* NRTStraightAxis.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTStraightAxis.m; sourceTree = "<group>"; };
+		F52B8642033DFF7E01A80102 /* NRTStraightTick.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTStraightTick.h; sourceTree = "<group>"; };
+		F52B8643033DFF7E01A80102 /* NRTStraightTick.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTStraightTick.m; sourceTree = "<group>"; };
+		F52B8644033DFF7E01A80102 /* NRTSymbolClusterGraphic.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTSymbolClusterGraphic.h; sourceTree = "<group>"; };
+		F52B8645033DFF7E01A80102 /* NRTSymbolClusterGraphic.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTSymbolClusterGraphic.m; sourceTree = "<group>"; };
+		F52B8646033DFF7E01A80102 /* NRTTransform.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTTransform.h; sourceTree = "<group>"; };
+		F52B8647033DFF7F01A80102 /* NRTTransform.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTTransform.m; sourceTree = "<group>"; };
+		F52B8648033DFF8001A80102 /* NRTXYChart.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTXYChart.h; sourceTree = "<group>"; };
+		F52B8649033DFF8001A80102 /* NRTXYChart.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTXYChart.m; sourceTree = "<group>"; };
+		F52B864A033DFF8101A80102 /* XYChartDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = XYChartDefaults.plist; sourceTree = "<group>"; };
+		F54C1A05034ECDCB01A80102 /* NRTDiscretizer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTDiscretizer.h; sourceTree = "<group>"; };
+		F54C1A06034ECDCB01A80102 /* NRTDiscretizer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTDiscretizer.m; sourceTree = "<group>"; };
+		F54C1A09034ED03301A80102 /* NRTFloatRangeDiscretizer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NRTFloatRangeDiscretizer.h; sourceTree = "<group>"; };
+		F54C1A0A034ED03301A80102 /* NRTFloatRangeDiscretizer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NRTFloatRangeDiscretizer.m; sourceTree = "<group>"; };
+		F7AEEF29038187D20184B808 /* Narrative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Narrative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworkTarget section */
+		0867D69CFE84028FC02AAC07 /* OLD */ = {
+			isa = PBXFrameworkTarget;
+			buildConfigurationList = 5C353A9810686FB500FF0528 /* Build configuration list for PBXFrameworkTarget "OLD" */;
+			buildPhases = (
+				0867D69DFE84028FC02AAC07 /* Headers */,
+				0867D69EFE84028FC02AAC07 /* Resources */,
+				0867D69FFE84028FC02AAC07 /* Sources */,
+				0867D6A0FE84028FC02AAC07 /* Frameworks */,
+				0867D6A2FE84028FC02AAC07 /* Rez */,
+			);
+			dependencies = (
+			);
+			name = OLD;
+			productInstallPath = "@executable_path/../Frameworks";
+			productName = Narrative;
+			productReference = F7AEEF29038187D20184B808 /* Narrative.framework */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Narrative</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.1.0</string>
+	<key>NSPrincipalClass</key>
+	<string></string>
+</dict>
+</plist>
+";
+		};
+/* End PBXFrameworkTarget section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0867D6A0FE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC7A6C310687137000CD68D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7AEEF29038187D20184B808 /* Narrative.framework */,
+				5CC7A6C510687137000CD68D /* Narrative.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Narrative */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8698033E005B01A80102 /* Defines */,
+				3ABCDF820464375C00000003 /* Exceptions */,
+				F52B869E033E01DD01A80102 /* Informal Protocols */,
+				F52B869D033E018C01A80102 /* Protocols */,
+				F52B8697033E005401A80102 /* Types */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				5CC7A6C610687137000CD68D /* Narrative-Info.plist */,
+			);
+			name = Narrative;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8617033DFF7C01A80102 /* ChartDefaults.plist */,
+				F52B864A033DFF8101A80102 /* XYChartDefaults.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F54C1A04034ECDA901A80102 /* Discretizers */,
+				F52B869B033E00D201A80102 /* Cluster Graphics */,
+				F52B8699033E009201A80102 /* View Components */,
+				F52B8696033E004201A80102 /* Views */,
+				F52B8695033E001301A80102 /* Charts */,
+				F52B8694033DFFD401A80102 /* Transforms */,
+				F52B8693033DFFB201A80102 /* Axes */,
+				F52B869C033E012601A80102 /* Plots */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3ABCDF820464375C00000003 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				3ABCDF830464377900000003 /* NRTExceptions.h */,
+				3ABCDF840464377900000003 /* NRTExceptions.m */,
+			);
+			name = Exceptions;
+			sourceTree = "<group>";
+		};
+		F52B8693033DFFB201A80102 /* Axes */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8607033DFF7801A80102 /* NRTAxis.h */,
+				F52B8608033DFF7801A80102 /* NRTAxis.m */,
+				F52B8609033DFF7801A80102 /* NRTAxisLabel.h */,
+				F52B860A033DFF7801A80102 /* NRTAxisLabel.m */,
+				F52B860B033DFF7801A80102 /* NRTAxisTick.h */,
+				F52B860C033DFF7901A80102 /* NRTAxisTick.m */,
+				F52B860D033DFF7901A80102 /* NRTAxisTitle.h */,
+				F52B860E033DFF7A01A80102 /* NRTAxisTitle.m */,
+				F52B8640033DFF7E01A80102 /* NRTStraightAxis.h */,
+				F52B8641033DFF7E01A80102 /* NRTStraightAxis.m */,
+				F52B8642033DFF7E01A80102 /* NRTStraightTick.h */,
+				F52B8643033DFF7E01A80102 /* NRTStraightTick.m */,
+			);
+			name = Axes;
+			sourceTree = "<group>";
+		};
+		F52B8694033DFFD401A80102 /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8646033DFF7E01A80102 /* NRTTransform.h */,
+				F52B8647033DFF7F01A80102 /* NRTTransform.m */,
+				F52B8618033DFF7C01A80102 /* NRTCompositeTransform.h */,
+				F52B8619033DFF7C01A80102 /* NRTCompositeTransform.m */,
+				F52B8625033DFF7C01A80102 /* NRTIrreducibleTransform.h */,
+				F52B8626033DFF7C01A80102 /* NRTIrreducibleTransform.m */,
+				F52B862B033DFF7E01A80102 /* NRTOrthogonalTransform.h */,
+				F52B862C033DFF7E01A80102 /* NRTOrthogonalTransform.m */,
+				F52B8603033DFF7801A80102 /* NRTAffineTransform.h */,
+				F52B8604033DFF7801A80102 /* NRTAffineTransform.m */,
+				F52B8611033DFF7C01A80102 /* NRTChainedTransform.h */,
+				F52B8612033DFF7C01A80102 /* NRTChainedTransform.m */,
+				F52B8627033DFF7C01A80102 /* NRTLinear1DTransform.h */,
+				F52B8628033DFF7D01A80102 /* NRTLinear1DTransform.m */,
+			);
+			name = Transforms;
+			sourceTree = "<group>";
+		};
+		F52B8695033E001301A80102 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8613033DFF7C01A80102 /* NRTChart.h */,
+				F52B8614033DFF7C01A80102 /* NRTChart.m */,
+				F52B8648033DFF8001A80102 /* NRTXYChart.h */,
+				F52B8649033DFF8001A80102 /* NRTXYChart.m */,
+				F52B8615033DFF7C01A80102 /* NRTChartAttributeStrings.h */,
+				F52B8616033DFF7C01A80102 /* NRTChartAttributeStrings.m */,
+			);
+			name = Charts;
+			sourceTree = "<group>";
+		};
+		F52B8696033E004201A80102 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8637033DFF7E01A80102 /* NRTPlotView.h */,
+				F52B8638033DFF7E01A80102 /* NRTPlotView.m */,
+				F52B862F033DFF7E01A80102 /* NRTPlotArea.h */,
+				F52B8630033DFF7E01A80102 /* NRTPlotArea.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F52B8697033E005401A80102 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8622033DFF7C01A80102 /* NRTFloatRange.h */,
+				F52B8621033DFF7C01A80102 /* NRTFloatRange.c */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		F52B8698033E005B01A80102 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8620033DFF7C01A80102 /* NRTDefines.h */,
+				F52B861E033DFF7C01A80102 /* NRTDataClusterIdentifiers.h */,
+				F52B861F033DFF7C01A80102 /* NRTDataClusterIdentifiers.m */,
+				F52B8623033DFF7C01A80102 /* NRTGeneralIdentifiers.h */,
+				F52B8624033DFF7C01A80102 /* NRTGeneralIdentifiers.m */,
+				F52B861A033DFF7C01A80102 /* NRTCoordinateIdentifiers.h */,
+				F52B861B033DFF7C01A80102 /* NRTCoordinateIdentifiers.m */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		F52B8699033E009201A80102 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8635033DFF7E01A80102 /* NRTPlotObject.h */,
+				F52B8636033DFF7E01A80102 /* NRTPlotObject.m */,
+				F52B8605033DFF7801A80102 /* NRTAnnotation.h */,
+				F52B8606033DFF7801A80102 /* NRTAnnotation.m */,
+				F52B8639033DFF7E01A80102 /* NRTPlotViewAnnotation.h */,
+				F52B863A033DFF7E01A80102 /* NRTPlotViewAnnotation.m */,
+			);
+			name = "View Components";
+			sourceTree = "<group>";
+		};
+		F52B869B033E00D201A80102 /* Cluster Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				F52B861C033DFF7C01A80102 /* NRTDataClusterGraphic.h */,
+				F52B861D033DFF7C01A80102 /* NRTDataClusterGraphic.m */,
+				F52B8644033DFF7E01A80102 /* NRTSymbolClusterGraphic.h */,
+				F52B8645033DFF7E01A80102 /* NRTSymbolClusterGraphic.m */,
+				F52B8629033DFF7E01A80102 /* NRTOHLCClusterGraphic.h */,
+				F52B862A033DFF7E01A80102 /* NRTOHLCClusterGraphic.m */,
+				F52B860F033DFF7A01A80102 /* NRTBarClusterGraphic.h */,
+				F52B8610033DFF7B01A80102 /* NRTBarClusterGraphic.m */,
+			);
+			name = "Cluster Graphics";
+			sourceTree = "<group>";
+		};
+		F52B869C033E012601A80102 /* Plots */ = {
+			isa = PBXGroup;
+			children = (
+				F52B862D033DFF7E01A80102 /* NRTPlot.h */,
+				F52B862E033DFF7E01A80102 /* NRTPlot.m */,
+				F52B863C033DFF7E01A80102 /* NRTScatterPlot.h */,
+				F52B863D033DFF7E01A80102 /* NRTScatterPlot.m */,
+			);
+			name = Plots;
+			sourceTree = "<group>";
+		};
+		F52B869D033E018C01A80102 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F52B863B033DFF7E01A80102 /* NRTPlotViewComponent.h */,
+				F52B8631033DFF7E01A80102 /* NRTPlotAreaComponent.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		F52B869E033E01DD01A80102 /* Informal Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F52B8634033DFF7E01A80102 /* NRTPlotDataSource.h */,
+			);
+			name = "Informal Protocols";
+			sourceTree = "<group>";
+		};
+		F54C1A04034ECDA901A80102 /* Discretizers */ = {
+			isa = PBXGroup;
+			children = (
+				F54C1A05034ECDCB01A80102 /* NRTDiscretizer.h */,
+				F54C1A06034ECDCB01A80102 /* NRTDiscretizer.m */,
+				F54C1A09034ED03301A80102 /* NRTFloatRangeDiscretizer.h */,
+				F54C1A0A034ED03301A80102 /* NRTFloatRangeDiscretizer.m */,
+			);
+			name = Discretizers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0867D69DFE84028FC02AAC07 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52B864B033DFF8101A80102 /* NRTAffineTransform.h in Headers */,
+				F52B864D033DFF8101A80102 /* NRTAnnotation.h in Headers */,
+				F52B864F033DFF8101A80102 /* NRTAxis.h in Headers */,
+				F52B8651033DFF8101A80102 /* NRTAxisLabel.h in Headers */,
+				F52B8653033DFF8101A80102 /* NRTAxisTick.h in Headers */,
+				F52B8655033DFF8101A80102 /* NRTAxisTitle.h in Headers */,
+				F52B8657033DFF8101A80102 /* NRTBarClusterGraphic.h in Headers */,
+				F52B8659033DFF8101A80102 /* NRTChainedTransform.h in Headers */,
+				F52B865B033DFF8101A80102 /* NRTChart.h in Headers */,
+				F52B865D033DFF8101A80102 /* NRTChartAttributeStrings.h in Headers */,
+				F52B8660033DFF8101A80102 /* NRTCompositeTransform.h in Headers */,
+				F52B8662033DFF8101A80102 /* NRTCoordinateIdentifiers.h in Headers */,
+				F52B8664033DFF8101A80102 /* NRTDataClusterGraphic.h in Headers */,
+				F52B8666033DFF8101A80102 /* NRTDataClusterIdentifiers.h in Headers */,
+				F52B8668033DFF8101A80102 /* NRTDefines.h in Headers */,
+				F52B866A033DFF8101A80102 /* NRTFloatRange.h in Headers */,
+				F52B866B033DFF8101A80102 /* NRTGeneralIdentifiers.h in Headers */,
+				F52B866D033DFF8101A80102 /* NRTIrreducibleTransform.h in Headers */,
+				F52B866F033DFF8101A80102 /* NRTLinear1DTransform.h in Headers */,
+				F52B8671033DFF8101A80102 /* NRTOHLCClusterGraphic.h in Headers */,
+				F52B8673033DFF8101A80102 /* NRTOrthogonalTransform.h in Headers */,
+				F52B8675033DFF8101A80102 /* NRTPlot.h in Headers */,
+				F52B8677033DFF8101A80102 /* NRTPlotArea.h in Headers */,
+				F52B8679033DFF8101A80102 /* NRTPlotAreaComponent.h in Headers */,
+				F52B867C033DFF8101A80102 /* NRTPlotDataSource.h in Headers */,
+				F52B867D033DFF8101A80102 /* NRTPlotObject.h in Headers */,
+				F52B867F033DFF8101A80102 /* NRTPlotView.h in Headers */,
+				F52B8681033DFF8101A80102 /* NRTPlotViewAnnotation.h in Headers */,
+				F52B8683033DFF8101A80102 /* NRTPlotViewComponent.h in Headers */,
+				F52B8684033DFF8101A80102 /* NRTScatterPlot.h in Headers */,
+				F52B8688033DFF8101A80102 /* NRTStraightAxis.h in Headers */,
+				F52B868A033DFF8101A80102 /* NRTStraightTick.h in Headers */,
+				F52B868C033DFF8101A80102 /* NRTSymbolClusterGraphic.h in Headers */,
+				F52B868E033DFF8101A80102 /* NRTTransform.h in Headers */,
+				F52B8690033DFF8101A80102 /* NRTXYChart.h in Headers */,
+				F54C1A07034ECDCB01A80102 /* NRTDiscretizer.h in Headers */,
+				F54C1A0B034ED03301A80102 /* NRTFloatRangeDiscretizer.h in Headers */,
+				3ABCDF850464377900000003 /* NRTExceptions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC7A6C010687137000CD68D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC7A6D910687175000CD68D /* NRTAffineTransform.h in Headers */,
+				5CC7A6DB10687177000CD68D /* NRTAnnotation.h in Headers */,
+				5CC7A6DD1068717A000CD68D /* NRTAxis.h in Headers */,
+				5CC7A6DF1068717B000CD68D /* NRTAxisLabel.h in Headers */,
+				5CC7A6E11068717D000CD68D /* NRTAxisTick.h in Headers */,
+				5CC7A6E310687180000CD68D /* NRTAxisTitle.h in Headers */,
+				5CC7A6E510687181000CD68D /* NRTBarClusterGraphic.h in Headers */,
+				5CC7A6E710687183000CD68D /* NRTChainedTransform.h in Headers */,
+				5CC7A6E910687184000CD68D /* NRTChart.h in Headers */,
+				5CC7A6EC10687187000CD68D /* NRTChartAttributeStrings.h in Headers */,
+				5CC7A6EE10687189000CD68D /* NRTCompositeTransform.h in Headers */,
+				5CC7A6EF1068718A000CD68D /* NRTCoordinateIdentifiers.h in Headers */,
+				5CC7A6F11068718C000CD68D /* NRTDataClusterGraphic.h in Headers */,
+				5CC7A6F31068718F000CD68D /* NRTDataClusterIdentifiers.h in Headers */,
+				5CC7A6F510687190000CD68D /* NRTDefines.h in Headers */,
+				5CC7A6F610687191000CD68D /* NRTDiscretizer.h in Headers */,
+				5CC7A6F810687194000CD68D /* NRTExceptions.h in Headers */,
+				5CC7A6FB10687196000CD68D /* NRTFloatRange.h in Headers */,
+				5CC7A6FD10687198000CD68D /* NRTFloatRangeDiscretizer.h in Headers */,
+				5CC7A6FE10687199000CD68D /* NRTGeneralIdentifiers.h in Headers */,
+				5CC7A7001068719D000CD68D /* NRTIrreducibleTransform.h in Headers */,
+				5CC7A7021068719F000CD68D /* NRTLinear1DTransform.h in Headers */,
+				5CC7A704106871A2000CD68D /* NRTOHLCClusterGraphic.h in Headers */,
+				5CC7A706106871A4000CD68D /* NRTOrthogonalTransform.h in Headers */,
+				5CC7A708106871A6000CD68D /* NRTPlot.h in Headers */,
+				5CC7A70A106871A8000CD68D /* NRTPlotArea.h in Headers */,
+				5CC7A70C106871AA000CD68D /* NRTPlotAreaComponent.h in Headers */,
+				5CC7A70D106871AB000CD68D /* NRTPlotDataSource.h in Headers */,
+				5CC7A70E106871AC000CD68D /* NRTPlotObject.h in Headers */,
+				5CC7A70F106871AC000CD68D /* NRTPlotView.h in Headers */,
+				5CC7A712106871AF000CD68D /* NRTPlotViewAnnotation.h in Headers */,
+				5CC7A714106871B1000CD68D /* NRTPlotViewComponent.h in Headers */,
+				5CC7A715106871B3000CD68D /* NRTScatterPlot.h in Headers */,
+				5CC7A717106871B4000CD68D /* NRTStraightAxis.h in Headers */,
+				5CC7A719106871B7000CD68D /* NRTStraightTick.h in Headers */,
+				5CC7A71B106871B8000CD68D /* NRTSymbolClusterGraphic.h in Headers */,
+				5CC7A71D106871B9000CD68D /* NRTTransform.h in Headers */,
+				5CC7A71F106871BB000CD68D /* NRTXYChart.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5CC7A6C410687137000CD68D /* Narrative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC7A6CA10687138000CD68D /* Build configuration list for PBXNativeTarget "Narrative" */;
+			buildPhases = (
+				5CC7A6C010687137000CD68D /* Headers */,
+				5CC7A6C110687137000CD68D /* Resources */,
+				5CC7A6C210687137000CD68D /* Sources */,
+				5CC7A6C310687137000CD68D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Narrative;
+			productName = Narrative;
+			productReference = 5CC7A6C510687137000CD68D /* Narrative.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5C353A9710686FB500FF0528 /* Build configuration list for PBXProject "Narrative" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* Narrative */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0867D69CFE84028FC02AAC07 /* OLD */,
+				5CC7A6C410687137000CD68D /* Narrative */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0867D69EFE84028FC02AAC07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089C1668FE841158C02AAC07 /* InfoPlist.strings in Resources */,
+				F52B865F033DFF8101A80102 /* ChartDefaults.plist in Resources */,
+				F52B8692033DFF8101A80102 /* XYChartDefaults.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC7A6C110687137000CD68D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC7A6D410687171000CD68D /* ChartDefaults.plist in Resources */,
+				5CC7A6D710687174000CD68D /* Narrative-Info.plist in Resources */,
+				5CC7A721106871BE000CD68D /* XYChartDefaults.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		0867D6A2FE84028FC02AAC07 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0867D69FFE84028FC02AAC07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52B864C033DFF8101A80102 /* NRTAffineTransform.m in Sources */,
+				F52B864E033DFF8101A80102 /* NRTAnnotation.m in Sources */,
+				F52B8650033DFF8101A80102 /* NRTAxis.m in Sources */,
+				F52B8652033DFF8101A80102 /* NRTAxisLabel.m in Sources */,
+				F52B8654033DFF8101A80102 /* NRTAxisTick.m in Sources */,
+				F52B8656033DFF8101A80102 /* NRTAxisTitle.m in Sources */,
+				F52B8658033DFF8101A80102 /* NRTBarClusterGraphic.m in Sources */,
+				F52B865A033DFF8101A80102 /* NRTChainedTransform.m in Sources */,
+				F52B865C033DFF8101A80102 /* NRTChart.m in Sources */,
+				F52B865E033DFF8101A80102 /* NRTChartAttributeStrings.m in Sources */,
+				F52B8661033DFF8101A80102 /* NRTCompositeTransform.m in Sources */,
+				F52B8663033DFF8101A80102 /* NRTCoordinateIdentifiers.m in Sources */,
+				F52B8665033DFF8101A80102 /* NRTDataClusterGraphic.m in Sources */,
+				F52B8667033DFF8101A80102 /* NRTDataClusterIdentifiers.m in Sources */,
+				F52B8669033DFF8101A80102 /* NRTFloatRange.c in Sources */,
+				F52B866C033DFF8101A80102 /* NRTGeneralIdentifiers.m in Sources */,
+				F52B866E033DFF8101A80102 /* NRTIrreducibleTransform.m in Sources */,
+				F52B8670033DFF8101A80102 /* NRTLinear1DTransform.m in Sources */,
+				F52B8672033DFF8101A80102 /* NRTOHLCClusterGraphic.m in Sources */,
+				F52B8674033DFF8101A80102 /* NRTOrthogonalTransform.m in Sources */,
+				F52B8676033DFF8101A80102 /* NRTPlot.m in Sources */,
+				F52B8678033DFF8101A80102 /* NRTPlotArea.m in Sources */,
+				F52B867E033DFF8101A80102 /* NRTPlotObject.m in Sources */,
+				F52B8680033DFF8101A80102 /* NRTPlotView.m in Sources */,
+				F52B8682033DFF8101A80102 /* NRTPlotViewAnnotation.m in Sources */,
+				F52B8685033DFF8101A80102 /* NRTScatterPlot.m in Sources */,
+				F52B8689033DFF8101A80102 /* NRTStraightAxis.m in Sources */,
+				F52B868B033DFF8101A80102 /* NRTStraightTick.m in Sources */,
+				F52B868D033DFF8101A80102 /* NRTSymbolClusterGraphic.m in Sources */,
+				F52B868F033DFF8101A80102 /* NRTTransform.m in Sources */,
+				F52B8691033DFF8101A80102 /* NRTXYChart.m in Sources */,
+				F54C1A08034ECDCB01A80102 /* NRTDiscretizer.m in Sources */,
+				F54C1A0C034ED03301A80102 /* NRTFloatRangeDiscretizer.m in Sources */,
+				3ABCDF860464377900000003 /* NRTExceptions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC7A6C210687137000CD68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC7A6DA10687176000CD68D /* NRTAffineTransform.m in Sources */,
+				5CC7A6DC10687179000CD68D /* NRTAnnotation.m in Sources */,
+				5CC7A6DE1068717B000CD68D /* NRTAxis.m in Sources */,
+				5CC7A6E01068717C000CD68D /* NRTAxisLabel.m in Sources */,
+				5CC7A6E21068717E000CD68D /* NRTAxisTick.m in Sources */,
+				5CC7A6E410687181000CD68D /* NRTAxisTitle.m in Sources */,
+				5CC7A6E610687182000CD68D /* NRTBarClusterGraphic.m in Sources */,
+				5CC7A6E810687183000CD68D /* NRTChainedTransform.m in Sources */,
+				5CC7A6EA10687186000CD68D /* NRTChart.m in Sources */,
+				5CC7A6EB10687187000CD68D /* NRTChartAttributeStrings.m in Sources */,
+				5CC7A6ED10687188000CD68D /* NRTCompositeTransform.m in Sources */,
+				5CC7A6F01068718B000CD68D /* NRTCoordinateIdentifiers.m in Sources */,
+				5CC7A6F21068718E000CD68D /* NRTDataClusterGraphic.m in Sources */,
+				5CC7A6F410687190000CD68D /* NRTDataClusterIdentifiers.m in Sources */,
+				5CC7A6F710687192000CD68D /* NRTDiscretizer.m in Sources */,
+				5CC7A6F910687195000CD68D /* NRTExceptions.m in Sources */,
+				5CC7A6FA10687196000CD68D /* NRTFloatRange.c in Sources */,
+				5CC7A6FC10687197000CD68D /* NRTFloatRangeDiscretizer.m in Sources */,
+				5CC7A6FF1068719B000CD68D /* NRTGeneralIdentifiers.m in Sources */,
+				5CC7A7011068719E000CD68D /* NRTIrreducibleTransform.m in Sources */,
+				5CC7A703106871A0000CD68D /* NRTLinear1DTransform.m in Sources */,
+				5CC7A705106871A2000CD68D /* NRTOHLCClusterGraphic.m in Sources */,
+				5CC7A707106871A5000CD68D /* NRTOrthogonalTransform.m in Sources */,
+				5CC7A709106871A7000CD68D /* NRTPlot.m in Sources */,
+				5CC7A70B106871AA000CD68D /* NRTPlotArea.m in Sources */,
+				5CC7A710106871AD000CD68D /* NRTPlotObject.m in Sources */,
+				5CC7A711106871AE000CD68D /* NRTPlotView.m in Sources */,
+				5CC7A713106871B0000CD68D /* NRTPlotViewAnnotation.m in Sources */,
+				5CC7A716106871B3000CD68D /* NRTScatterPlot.m in Sources */,
+				5CC7A718106871B6000CD68D /* NRTStraightAxis.m in Sources */,
+				5CC7A71A106871B7000CD68D /* NRTStraightTick.m in Sources */,
+				5CC7A71C106871B9000CD68D /* NRTSymbolClusterGraphic.m in Sources */,
+				5CC7A71E106871BA000CD68D /* NRTTransform.m in Sources */,
+				5CC7A720106871BD000CD68D /* NRTXYChart.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C353A9110686FB500FF0528 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		5C353A9210686FB500FF0528 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		5C353A9310686FB500FF0528 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+		5C353A9410686FB500FF0528 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x3f000000,
+				);
+				PRODUCT_NAME = Narrative;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		5C353A9510686FB500FF0528 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x3f000000,
+				);
+				PRODUCT_NAME = Narrative;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		5C353A9610686FB500FF0528 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x3f000000,
+				);
+				PRODUCT_NAME = Narrative;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Default;
+		};
+		5CC7A6C710687138000CD68D /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Narrative-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Narrative;
+			};
+			name = Development;
+		};
+		5CC7A6C810687138000CD68D /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Narrative-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Narrative;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		5CC7A6C910687138000CD68D /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = 4.2;
+				INFOPLIST_FILE = "Narrative-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_NAME = Narrative;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C353A9710686FB500FF0528 /* Build configuration list for PBXProject "Narrative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C353A9110686FB500FF0528 /* Development */,
+				5C353A9210686FB500FF0528 /* Deployment */,
+				5C353A9310686FB500FF0528 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		5C353A9810686FB500FF0528 /* Build configuration list for PBXFrameworkTarget "OLD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C353A9410686FB500FF0528 /* Development */,
+				5C353A9510686FB500FF0528 /* Deployment */,
+				5C353A9610686FB500FF0528 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		5CC7A6CA10687138000CD68D /* Build configuration list for PBXNativeTarget "Narrative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC7A6C710687138000CD68D /* Development */,
+				5CC7A6C810687138000CD68D /* Deployment */,
+				5CC7A6C910687138000CD68D /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

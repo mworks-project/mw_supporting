@@ -1,0 +1,177 @@
+<HTML><HEAD><TITLE></TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<BR><BR><FONT COLOR="#000066"><H1><A NAME="//apple_ref/occ/cl/NRTDataClusterGraphic">NRTDataClusterGraphic</A></H1></FONT><BR>
+
+
+
+	<blockquote><DL><DT><B>Inherits From:</B></DT>  
+	<DD>NRTPlotObject</DD>
+</DL></blockquote>
+
+
+
+
+
+	<blockquote><DL><DT><B>Declared In:</B></DT>
+	<DD>NRTDataClusterGraphic.h</DD>
+	</DL></blockquote>
+
+<BR><BR>
+
+
+<H2>Class Description</H2>
+
+NRTDataClusterGraphic.h 
+Narrative<P>
+
+A data cluster is a logically grouped set of data in a plot. For example, 
+a point with error bars is a data cluster. Usually a data cluster requires 
+several coordinates to define it. In our error bar example, you need the 
+actual data point, plus upper and lower error bar data.<P>
+
+It's important not to confuse cluster coordinates, which define a whole 
+data cluster, like in the error bar example above, with plot coordinates, 
+which define coordinates in the NRTPlotArea. Typically, a data cluster will 
+require several plot coordinates to fully define it.<P>
+
+Created by Drew McCormack on Sat Jul 13 2002. 
+Copyright (c) 2002 __MyCompanyName__. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Variables</H2>
+	<blockquote>
+	
+		<CODE>NSDictionary *<B>_clusterCoordinates</B>;</CODE><BR>
+		<CODE>NRTTransform *<B>_coordinatesToViewTransform</B>;</CODE><BR>
+	<P><TABLE>
+	
+		<TR><TD>_clusterCoordinates</TD><TD>No description.</TD></TR>
+	
+		<TR><TD>_coordinatesToViewTransform</TD><TD>No description.</TD></TR>
+	
+	</TABLE>
+	</blockquote>
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Method Types</H2>
+	<blockquote>
+	
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- dealloc">- dealloc</A></DD>
+		
+			<DD> <A HREF="#- principalCoordinates">- principalCoordinates</A></DD>
+		
+		</DL>
+	
+		
+			Most important plot point in cluster. Abstract
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- setCoordinatesToViewTransform:">- setCoordinatesToViewTransform:</A></DD>
+		
+			<DD> <A HREF="#- coordinatesToViewTransform">- coordinatesToViewTransform</A></DD>
+		
+			<DD> <A HREF="#- drawInPlotView:">- drawInPlotView:</A></DD>
+		
+		</DL>
+	
+		
+			Abstract
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- setClusterCoordinates:">- setClusterCoordinates:</A></DD>
+		
+			<DD> <A HREF="#- clusterCoordinates">- clusterCoordinates</A></DD>
+		
+		</DL>
+	
+	</blockquote>
+
+
+
+
+ 
+
+	<HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Methods</H2>
+ 
+	
+		
+		<A NAME="- clusterCoordinates"></A><H3><A NAME="//apple_ref/occ/instm/NRTDataClusterGraphic/clusterCoordinates">clusterCoordinates</A></H3><P>
+		<CODE>- (NSDictionary *)<B>clusterCoordinates</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- coordinatesToViewTransform"></A><H3><A NAME="//apple_ref/occ/instm/NRTDataClusterGraphic/coordinatesToViewTransform">coordinatesToViewTransform</A></H3><P>
+		<CODE>- (NRTTransform *)<B>coordinatesToViewTransform</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- dealloc"></A><H3><A NAME="//apple_ref/occ/instm/NRTDataClusterGraphic/dealloc">dealloc</A></H3><P>
+		<CODE>- (void)<B>dealloc</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- drawInPlotView:"></A><H3><A NAME="//apple_ref/occ/instm/NRTDataClusterGraphic/drawInPlotView:">drawInPlotView:</A></H3><P>
+		<CODE>- (void)<B>drawInPlotView:</B>(NRTPlotView *)<EM>plotView</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- principalCoordinates"></A><H3><A NAME="//apple_ref/occ/instm/NRTDataClusterGraphic/principalCoordinates">principalCoordinates</A></H3><P>
+		<CODE>- (NSDictionary *)<B>principalCoordinates</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setClusterCoordinates:"></A><H3><A NAME="//apple_ref/occ/instm/NRTDataClusterGraphic/setClusterCoordinates:">setClusterCoordinates:</A></H3><P>
+		<CODE>- (void)<B>setClusterCoordinates:</B>(NSDictionary *)<EM>coords</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setCoordinatesToViewTransform:"></A><H3><A NAME="//apple_ref/occ/instm/NRTDataClusterGraphic/setCoordinatesToViewTransform:">setCoordinatesToViewTransform:</A></H3><P>
+		<CODE>- (void)<B>setCoordinatesToViewTransform:</B>(NRTTransform *)<EM>transform</EM>
+			
+		</CODE><P>
+		No method description.
+	
+
+
+
+
+<P><HR>
+Version 1.1 Copyright &copy;2003.  All Rights Reserved.  
+<P>
+</BODY></HTML>

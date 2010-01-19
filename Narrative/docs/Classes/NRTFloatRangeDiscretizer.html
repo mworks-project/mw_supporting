@@ -1,0 +1,205 @@
+<HTML><HEAD><TITLE></TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<BR><BR><FONT COLOR="#000066"><H1><A NAME="//apple_ref/occ/cl/NRTFloatRangeDiscretizer">NRTFloatRangeDiscretizer</A></H1></FONT><BR>
+
+
+
+	<blockquote><DL><DT><B>Inherits From:</B></DT>  
+	<DD>NRTDiscretizer</DD>
+</DL></blockquote>
+
+
+
+
+
+	<blockquote><DL><DT><B>Declared In:</B></DT>
+	<DD>NRTFloatRangeDiscretizer.h</DD>
+	</DL></blockquote>
+
+<BR><BR>
+
+
+<H2>Class Description</H2>
+
+NRTFloatRangeDiscretizer.h 
+Narrative<P>
+
+In this default implementation, a user can choose whether or not to have 
+discrete intervals rounded so that the interval only has a single significant 
+non-zero figure. For example, 1, 10, 500, 400000 are numbers of this type. If 
+this option is used, the discretizer may change the number of points in the 
+range to accommodate for this.<P>
+
+Created by Drew McCormack on Sat Oct 05 2002. 
+Copyright (c) 2002 __MyCompanyName__. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Variables</H2>
+	<blockquote>
+	
+		<CODE>NRTFloatRange <B>_floatRange</B>;</CODE><BR>
+		<CODE>BOOL <B>_useOnlyRoundNumbers</B>;</CODE><BR>
+		<CODE>unsigned <B>_desiredNumberOfDiscretePoints</B>;</CODE><BR>
+	<P><TABLE>
+	
+		<TR><TD>_floatRange</TD><TD>No description.</TD></TR>
+	
+		<TR><TD>_useOnlyRoundNumbers</TD><TD>Uses only one significant (non-zero) figure (eg 1, 10, 500)</TD></TR>
+	
+		<TR><TD>_desiredNumberOfDiscretePoints</TD><TD>Different discretizers can interpret this differently.</TD></TR>
+	
+	</TABLE>
+	</blockquote>
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Method Types</H2>
+	<blockquote>
+	
+		
+			Designated
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- initWithFloatRange:desiredNumberOfPoints:useOnlyRoundNumbers:">- initWithFloatRange:desiredNumberOfPoints:useOnlyRoundNumbers:</A></DD>
+		
+			<DD> <A HREF="#- initWithFloatRange:desiredNumberOfPoints:">- initWithFloatRange:desiredNumberOfPoints:</A></DD>
+		
+		</DL>
+	
+		
+			No rounding
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- initWithFloatRange:">- initWithFloatRange:</A></DD>
+		
+		</DL>
+	
+		
+			No rounding and 10 points
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- setFloatRange:">- setFloatRange:</A></DD>
+		
+			<DD> <A HREF="#- floatRange">- floatRange</A></DD>
+		
+			<DD> <A HREF="#- setDesiredNumberOfDiscretePoints:">- setDesiredNumberOfDiscretePoints:</A></DD>
+		
+			<DD> <A HREF="#- desiredNumberOfDiscretePoints">- desiredNumberOfDiscretePoints</A></DD>
+		
+			<DD> <A HREF="#- setUseOnlyRoundNumbers:">- setUseOnlyRoundNumbers:</A></DD>
+		
+			<DD> <A HREF="#- useOnlyRoundNumbers">- useOnlyRoundNumbers</A></DD>
+		
+			<DD> <A HREF="#- discretePoints">- discretePoints</A></DD>
+		
+		</DL>
+	
+	</blockquote>
+
+
+
+
+ 
+
+	<HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Methods</H2>
+ 
+	
+		
+		<A NAME="- desiredNumberOfDiscretePoints"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/desiredNumberOfDiscretePoints">desiredNumberOfDiscretePoints</A></H3><P>
+		<CODE>- (unsigned)<B>desiredNumberOfDiscretePoints</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- discretePoints"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/discretePoints">discretePoints</A></H3><P>
+		<CODE>- (NSArray *)<B>discretePoints</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- floatRange"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/floatRange">floatRange</A></H3><P>
+		<CODE>- (NRTFloatRange)<B>floatRange</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- initWithFloatRange:"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/initWithFloatRange:">initWithFloatRange:</A></H3><P>
+		<CODE>- (id)<B>initWithFloatRange:</B>(NRTFloatRange)<EM>range</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- initWithFloatRange:desiredNumberOfPoints:"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/initWithFloatRange:desiredNumberOfPoints:">initWithFloatRange:desiredNumberOfPoints:</A></H3><P>
+		<CODE>- (id)<B>initWithFloatRange:</B>(NRTFloatRange)<EM>range</EM> <B>desiredNumberOfPoints:</B>(unsigned)<EM>points</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- initWithFloatRange:desiredNumberOfPoints:useOnlyRoundNumbers:"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/initWithFloatRange:desiredNumberOfPoints:useOnlyRoundNumbers:">initWithFloatRange:desiredNumberOfPoints:useOnlyRoundNumbers:</A></H3><P>
+		<CODE>- (id)<B>initWithFloatRange:</B>(NRTFloatRange)<EM>range</EM> <B>desiredNumberOfPoints:</B>(unsigned)<EM>points</EM> <B>useOnlyRoundNumbers:</B>(BOOL)<EM>round</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setDesiredNumberOfDiscretePoints:"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/setDesiredNumberOfDiscretePoints:">setDesiredNumberOfDiscretePoints:</A></H3><P>
+		<CODE>- (void)<B>setDesiredNumberOfDiscretePoints:</B>(unsigned)<EM>num</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setFloatRange:"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/setFloatRange:">setFloatRange:</A></H3><P>
+		<CODE>- (void)<B>setFloatRange:</B>(NRTFloatRange)<EM>range</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setUseOnlyRoundNumbers:"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/setUseOnlyRoundNumbers:">setUseOnlyRoundNumbers:</A></H3><P>
+		<CODE>- (void)<B>setUseOnlyRoundNumbers:</B>(BOOL)<EM>roundNumbers</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- useOnlyRoundNumbers"></A><H3><A NAME="//apple_ref/occ/instm/NRTFloatRangeDiscretizer/useOnlyRoundNumbers">useOnlyRoundNumbers</A></H3><P>
+		<CODE>- (BOOL)<B>useOnlyRoundNumbers</B>
+		</CODE><P>
+		No method description.
+	
+
+
+
+
+<P><HR>
+Version 1.1 Copyright &copy;2003.  All Rights Reserved.  
+<P>
+</BODY></HTML>

@@ -1,0 +1,345 @@
+<HTML><HEAD><TITLE></TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<BR><BR><FONT COLOR="#000066"><H1><A NAME="//apple_ref/occ/cl/NRTAxis">NRTAxis</A></H1></FONT><BR>
+
+
+
+	<blockquote><DL><DT><B>Inherits From:</B></DT>  
+	<DD>NRTPlotObject</DD>
+</DL></blockquote>
+
+
+
+	<blockquote><DL><DT><B>Conforms To:</B></DT>
+	<DD>NRTPlotViewComponent</DD>
+</DL></blockquote>
+
+
+	<blockquote><DL><DT><B>Declared In:</B></DT>
+	<DD>NRTAxis.h</DD>
+	</DL></blockquote>
+
+<BR><BR>
+
+
+<H2>Class Description</H2>
+
+NRTAxis.h 
+Narrative<P>
+
+An NRTAxis is one dimensional, and has a coordinate which ranges from 0 to 1, called 
+the &quot;axis coordinate&quot;. It simply has a linear dependence on the position along 
+the axis length. 
+For convenience, tick placements can be given in plotting coordinates, which are 
+then transformed to the axis coordinate for drawing by the NRTAxis via a NRTTransform 
+object.<P>
+
+Created by Drew McCormack on Sat May 25 2002. 
+Copyright (c) 2002 __MyCompanyName__. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Variables</H2>
+	<blockquote>
+	
+		<CODE>NSArray *<B>_tickPositions</B>;</CODE><BR>
+		<CODE>NSArray *<B>_patternOfTicks</B>;</CODE><BR>
+		<CODE>NSArray *<B>_tickLabels</B>;</CODE><BR>
+		<CODE>NSObject &lt;NSCopying&gt; *<B>_identifier</B>;</CODE><BR>
+		<CODE>NSObject &lt;NSCopying&gt; *<B>_coordinateIdentifier</B>;</CODE><BR>
+		<CODE>NRTTransform *<B>_plotToAxisCoordinateTransform</B>;</CODE><BR>
+		<CODE>NRTAxisTitle *<B>_title</B>;</CODE><BR>
+	<P><TABLE>
+	
+		<TR><TD>_tickPositions</TD><TD>Given in plot coordinate, not axis coord</TD></TR>
+	
+		<TR><TD>_patternOfTicks</TD><TD>Can be all ticks, or just the repeating pattern</TD></TR>
+	
+		<TR><TD>_tickLabels</TD><TD>No description.</TD></TR>
+	
+		<TR><TD>_identifier</TD><TD>An identifier for the axis</TD></TR>
+	
+		<TR><TD>_coordinateIdentifier</TD><TD>The identifier of the coord. to which the axis applies</TD></TR>
+	
+		<TR><TD>_plotToAxisCoordinateTransform</TD><TD>Transforms from plot coord to axis coord</TD></TR>
+	
+		<TR><TD>_title</TD><TD>No description.</TD></TR>
+	
+	</TABLE>
+	</blockquote>
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Method Types</H2>
+	<blockquote>
+	
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- initWithCoordinateIdentifier:axisIdentifier:">- initWithCoordinateIdentifier:axisIdentifier:</A></DD>
+		
+			<DD> <A HREF="#- init">- init</A></DD>
+		
+			<DD> <A HREF="#- dealloc">- dealloc</A></DD>
+		
+			<DD> <A HREF="#- identifier">- identifier</A></DD>
+		
+			<DD> <A HREF="#- setIdentifier:">- setIdentifier:</A></DD>
+		
+			<DD> <A HREF="#- coordinateIdentifier">- coordinateIdentifier</A></DD>
+		
+			<DD> <A HREF="#- setCoordinateIdentifier:">- setCoordinateIdentifier:</A></DD>
+		
+			<DD> <A HREF="#- drawInPlotView:">- drawInPlotView:</A></DD>
+		
+		</DL>
+	
+		
+			Principal point is used as an origin for aligning objects. Abstract.
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- principalPoint">- principalPoint</A></DD>
+		
+		</DL>
+	
+		
+			Ticks
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- tickPositions">- tickPositions</A></DD>
+		
+		</DL>
+	
+		
+			Position is given in plotting coordinates
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- setTickPositions:">- setTickPositions:</A></DD>
+		
+		</DL>
+	
+		
+			This is one or more ticks, which represent the repeating pattern used to draw all ticks on the axis.
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- patternOfTicks">- patternOfTicks</A></DD>
+		
+			<DD> <A HREF="#- setPatternOfTicks:">- setPatternOfTicks:</A></DD>
+		
+		</DL>
+	
+		
+			Labels
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- tickLabels">- tickLabels</A></DD>
+		
+			<DD> <A HREF="#- setTickLabels:">- setTickLabels:</A></DD>
+		
+		</DL>
+	
+		
+			NRTTitle of axis
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- title">- title</A></DD>
+		
+			<DD> <A HREF="#- setTitle:">- setTitle:</A></DD>
+		
+		</DL>
+	
+		
+			NRTTransform
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- plotToAxisCoordinateTransform">- plotToAxisCoordinateTransform</A></DD>
+		
+			<DD> <A HREF="#- setPlotToAxisCoordinateTransform:">- setPlotToAxisCoordinateTransform:</A></DD>
+		
+		</DL>
+	
+		
+			Abstract methods used for determining drawing coords.
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- plotViewPointForAxisCoordinate:">- plotViewPointForAxisCoordinate:</A></DD>
+		
+		</DL>
+	
+	</blockquote>
+
+
+
+
+ 
+
+	<HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Methods</H2>
+ 
+	
+		
+		<A NAME="- coordinateIdentifier"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/coordinateIdentifier">coordinateIdentifier</A></H3><P>
+		<CODE>- (NSObject &lt;NSCopying&gt; *)<B>coordinateIdentifier</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- dealloc"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/dealloc">dealloc</A></H3><P>
+		<CODE>- (void)<B>dealloc</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- drawInPlotView:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/drawInPlotView:">drawInPlotView:</A></H3><P>
+		<CODE>- (void)<B>drawInPlotView:</B>(NRTPlotView *)<EM>view</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- identifier"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/identifier">identifier</A></H3><P>
+		<CODE>- (NSObject &lt;NSCopying&gt; *)<B>identifier</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- init"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/init">init</A></H3><P>
+		<CODE>- (id)<B>init</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- initWithCoordinateIdentifier:axisIdentifier:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/initWithCoordinateIdentifier:axisIdentifier:">initWithCoordinateIdentifier:axisIdentifier:</A></H3><P>
+		<CODE>- (id)<B>initWithCoordinateIdentifier:</B>(id)<EM>coordIdentifier</EM> <B>axisIdentifier:</B>(id)<EM>axisIdentifier</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- patternOfTicks"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/patternOfTicks">patternOfTicks</A></H3><P>
+		<CODE>- (NSArray *)<B>patternOfTicks</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- plotToAxisCoordinateTransform"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/plotToAxisCoordinateTransform">plotToAxisCoordinateTransform</A></H3><P>
+		<CODE>- (NRTTransform *)<B>plotToAxisCoordinateTransform</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- plotViewPointForAxisCoordinate:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/plotViewPointForAxisCoordinate:">plotViewPointForAxisCoordinate:</A></H3><P>
+		<CODE>- (NSPoint)<B>plotViewPointForAxisCoordinate:</B>(float)<EM>coord</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- principalPoint"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/principalPoint">principalPoint</A></H3><P>
+		<CODE>- (NSPoint)<B>principalPoint</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setCoordinateIdentifier:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/setCoordinateIdentifier:">setCoordinateIdentifier:</A></H3><P>
+		<CODE>- (void)<B>setCoordinateIdentifier:</B>(NSObject &lt;NSCopying&gt; *)<EM>coordIdentifier</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setIdentifier:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/setIdentifier:">setIdentifier:</A></H3><P>
+		<CODE>- (void)<B>setIdentifier:</B>(NSObject &lt;NSCopying&gt; *)<EM>identifier</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setPatternOfTicks:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/setPatternOfTicks:">setPatternOfTicks:</A></H3><P>
+		<CODE>- (void)<B>setPatternOfTicks:</B>(NSArray *)<EM>tickPattern</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setPlotToAxisCoordinateTransform:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/setPlotToAxisCoordinateTransform:">setPlotToAxisCoordinateTransform:</A></H3><P>
+		<CODE>- (void)<B>setPlotToAxisCoordinateTransform:</B>(NRTTransform *)<EM>transform</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setTickLabels:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/setTickLabels:">setTickLabels:</A></H3><P>
+		<CODE>- (void)<B>setTickLabels:</B>(NSArray *)<EM>labels</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setTickPositions:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/setTickPositions:">setTickPositions:</A></H3><P>
+		<CODE>- (void)<B>setTickPositions:</B>(NSArray *)<EM>positions</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- setTitle:"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/setTitle:">setTitle:</A></H3><P>
+		<CODE>- (void)<B>setTitle:</B>(NRTAxisTitle *)<EM>title</EM>
+			
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- tickLabels"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/tickLabels">tickLabels</A></H3><P>
+		<CODE>- (NSArray *)<B>tickLabels</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- tickPositions"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/tickPositions">tickPositions</A></H3><P>
+		<CODE>- (NSArray *)<B>tickPositions</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- title"></A><H3><A NAME="//apple_ref/occ/instm/NRTAxis/title">title</A></H3><P>
+		<CODE>- (NRTAxisTitle *)<B>title</B>
+		</CODE><P>
+		No method description.
+	
+
+
+
+
+<P><HR>
+Version 1.1 Copyright &copy;2003.  All Rights Reserved.  
+<P>
+</BODY></HTML>
