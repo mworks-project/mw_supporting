@@ -280,8 +280,8 @@ lipo_gnu_build("png", "\.a", "--enable-static --disable-shared", lame_config=Tru
 
 nuke_project("jpeg")
 copy_project("jpeg-6b", "jpeg")
-#system_call("ln -s /usr/bin/glibtool %s/jpeg/libtool" % staging_root)
-lipo_gnu_build("jpeg", "\.a", "--disable-static --disable-shared", lame_config=True, make_calls="make clean; make; make install-lib")
+system_call("ln -s /usr/bin/glibtool %s/jpeg/libtool" % staging_root)
+lipo_gnu_build("jpeg", "\.a", "--enable-static --disable-shared", lame_config=True, make_calls="make clean; make; make install-lib")
 
 nuke_project("lcms")
 copy_project("lcms-1.15", "lcms")
