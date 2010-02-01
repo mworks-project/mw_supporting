@@ -811,7 +811,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Narrative;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = "Development (10.5 Compatible)";
 		};
