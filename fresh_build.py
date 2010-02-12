@@ -29,7 +29,7 @@ SDKstaging_root="/Developer/SDKs/MacOSX%s.sdk" % sdk
 MACOSX_DEPLOYMENT_TARGET=sdk
 
 
-cflags="-isysroot %s -mmacosx-version-min=%s -Dattribute_deprecated= -w" % (SDKstaging_root, MACOSX_DEPLOYMENT_TARGET)
+cflags="-fexceptions -isysroot %s -mmacosx-version-min=%s -Dattribute_deprecated= -w" % (SDKstaging_root, MACOSX_DEPLOYMENT_TARGET)
 
 
 
