@@ -1,4 +1,11 @@
 # Building #
+
+### Prerequisites ###
+
+In order to build Boost, you need to install [CMake](http://www.cmake.org/).
+
+### Build ###
+
 Simply run "python fresh_build.py" to build all supporting libraries. Intermediate results will be stored in:
 	/tmp/mw_staging
 If you wish to ensure a clean full rebuild (_not_ usually necessary), rm -rf this tmp directory.
