@@ -310,5 +310,7 @@ else:
 install_root = "/Library/Application\ Support/MonkeyWorks/Developer/%s" % (gcc_prefix)
 os.system("mkdir -p %s/lib" % install_root)
 os.system("mkdir -p %s/include" % install_root)
+os.system("mkdir -p %s/bin" % install_root)
 os.system("cp -R %s/lib/* %s/lib/" % (staging_root, install_root))
 os.system("cp -R %s/include/* %s/include/" % (staging_root, install_root))
+os.system("cp %s/mw_xcodebuild %s/bin/" % (base_dir, install_root))
