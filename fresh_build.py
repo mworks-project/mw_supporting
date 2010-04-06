@@ -2,35 +2,63 @@ import os
 import sys
 import subprocess as sp 
 import re
+import getopt
+
+def usage():
+    print("""Usage:
+              fresh_build.py  --help
+              fresh_build.py --rebuild_all
+              fresh_build.py --use_gcc40
+              """)
+    return
+
+opts, args = getopt.getopt(sys.argv[1:], "hrs:", ["help", "rebuild_all", "sdk="])
+
+rebuild_all = False
+sdk = '10.6'
+
+
+for o, a in opts:
+    if o in ("-h", "--help"):
+        usage()
+        sys.exit()
+    elif o in ("-r", "--rebuild_all"):
+        rebuild_all = True
+    elif o in ("-s", "--sdk"):
+        sdk = a
+    else:
+        assert False, "unhandled option: %s" % o
 
 base_dir = os.path.abspath(os.curdir)
 staging_root = "/tmp/mw_staging"
-
-rebuild_all = False
-
 current_dir = "/tmp"
 
-use_gcc_40 = True
-
-if(use_gcc_40):
-    sdk = "10.5"
+if sdk == '10.5':
+    use_gcc_40 = True
     gcc_path = "/usr/bin/gcc-4.0"
     gplusplus_path = "/usr/bin/g++-4.0"
     opt_cflags = ""
     python_version = "2.5"
-else:
-    sdk = "10.6"
+elif sdk == '10.6':
+    use_gcc_40 = False
     gcc_path = "/usr/bin/gcc-4.2"
     gplusplus_path = "/usr/bin/g++-4.2"
     opt_cflags = "-mtune=core2 "
     python_version = "2.6"
+else:
+    assert False, "unknown sdk option: %s" % sdk
 
 SDKstaging_root="/Developer/SDKs/MacOSX%s.sdk" % sdk
 MACOSX_DEPLOYMENT_TARGET=sdk
 
-
 cflags="-fexceptions -isysroot %s -mmacosx-version-min=%s -Dattribute_deprecated= -w" % (SDKstaging_root, MACOSX_DEPLOYMENT_TARGET)
 
+if use_gcc_40:
+    gcc_prefix = "gcc40"
+else:
+    gcc_prefix = "gcc42"
+
+install_root = "/Library/Application\ Support/MWorks/Developer/%s" % (gcc_prefix)
 
 
 def grep(string,list):
@@ -266,7 +294,6 @@ system_call("mkdir -p %s" % staging_root)
 
 nuke_project("boost")
 copy_project("boost_1_40_0", "boost")
-#apply_patch("boost", "boost_patch_for_OSX_fat.diff")
 
 build_boost("boost", python_version)
 
@@ -303,11 +330,7 @@ nuke_project("cppunit")
 copy_project("cppunit-1.12.0", "cppunit")
 lipo_gnu_build("cppunit", "\.a", "--enable-static=yes --enable-shared=no", lame_config=True)
 
-if use_gcc_40:
-    gcc_prefix = "gcc40"
-else:
-    gcc_prefix = "gcc42"
-install_root = "/Library/Application\ Support/MonkeyWorks/Developer/%s" % (gcc_prefix)
+
 os.system("mkdir -p %s/lib" % install_root)
 os.system("mkdir -p %s/include" % install_root)
 os.system("mkdir -p %s/bin" % install_root)
