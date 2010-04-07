@@ -12,9 +12,9 @@ If you wish to ensure a clean full rebuild (_not_ usually necessary), rm -rf thi
 
 For the Mac version, all libraries are targeted to build as *static* libraries, and to install in:
 
-	/Library/Application Support/MonkeyWorks/Developer/{include|lib}
+	/Library/Application Support/MWorks/Developer/{include|lib}
 	or
-	/Library/Application Support/MonkeyWorks/Developer/gcc40/{include|lib}
+	/Library/Application Support/MWorks/Developer/gcc40/{include|lib}
 	
 depending on settings inside the fresh_build script.  The gcc40 subdirectory is placed there to help ease backward compatibility with OS X 10.5.  All libraries are built as intel-only "fat" libraries (i386 + x86_64).
 
