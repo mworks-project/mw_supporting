@@ -53,12 +53,9 @@ MACOSX_DEPLOYMENT_TARGET=sdk
 
 cflags="-fexceptions -isysroot %s -mmacosx-version-min=%s -Dattribute_deprecated= -w" % (SDKstaging_root, MACOSX_DEPLOYMENT_TARGET)
 
+install_root = "/Library/Application\ Support/MWorks/Developer"
 if use_gcc_40:
-    gcc_prefix = "gcc40"
-else:
-    gcc_prefix = "gcc42"
-
-install_root = "/Library/Application\ Support/MWorks/Developer/%s" % (gcc_prefix)
+     install_root += "/gcc40"
 
 
 def grep(string,list):
