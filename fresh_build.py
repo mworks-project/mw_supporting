@@ -330,7 +330,5 @@ lipo_gnu_build("cppunit", "\.a", "--enable-static=yes --enable-shared=no", lame_
 
 os.system("mkdir -p %s/lib" % install_root)
 os.system("mkdir -p %s/include" % install_root)
-os.system("mkdir -p %s/bin" % install_root)
 os.system("cp -R %s/lib/* %s/lib/" % (staging_root, install_root))
 os.system("cp -R %s/include/* %s/include/" % (staging_root, install_root))
-os.system("cp %s/mw_xcodebuild %s/bin/" % (base_dir, install_root))
