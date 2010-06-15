@@ -8,7 +8,7 @@ def usage():
     print("""Usage:
               fresh_build.py  --help
               fresh_build.py --rebuild_all
-              fresh_build.py --use_gcc40
+              fresh_build.py --sdk=SDK_VERSION
               """)
     return
 
@@ -233,8 +233,6 @@ def apply_patch(project_name, patch_name):
     os.system("patch -p1 < %s" % patch_name )
 
 def build_boost(project_name, python_version):
-    manual_lipo = False
-    
     change_dir("%s/%s" % (staging_root, project_name))
     
     system_call("mkdir -p %s/include" % staging_root)
@@ -242,36 +240,18 @@ def build_boost(project_name, python_version):
     
     system_call("rm -f CMakeCache.txt")
     
-    if(manual_lipo):
-        system_call("cmake -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"i386\" -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=\"%s\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (staging_root, gcc_path, gplusplus_path, sdk, sdk))
-        system_call("make -k", None, False)
-        i386_dir = "%s/%s/lib_i386" % (staging_root, project_name)
-        system_call("rm -rf %s" % i386_dir)
-        system_call("mv %s/%s/lib %s" % (staging_root, project_name, i386_dir))
-    
-        system_call("cmake -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"x86_64\" -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=\"%s\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (staging_root, gcc_path, gplusplus_path, sdk, sdk))
-        x86_64_dir = "%s/%s/lib_x86_64" % (staging_root, project_name)
-        system_call("rm -rf %s" % x86_64_dir)
-        system_call("mv %s/%s/lib %s" % (staging_root, project_name, x86_64_dir))
-    else:
-        os.system("cmake -DPYTHON_EXECUTABLE:PATH=/usr/bin/python%s -DPYTHON_INCLUDE_PATH:PATH=/System/Library/Frameworks/Python.framework/Versions/%s/Headers -DPYTHON_LIBRARY:PATH=\"-F /System/Library/Frameworks -framework Python\" -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"i386;x86_64\" -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=\"%s\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (python_version, python_version, staging_root, gcc_path, gplusplus_path, sdk, sdk))
-        system_call("make -k", None, False)
+    os.system("cmake -DPYTHON_EXECUTABLE:PATH=/usr/bin/python%s -DPYTHON_INCLUDE_PATH:PATH=/System/Library/Frameworks/Python.framework/Versions/%s/Headers -DPYTHON_LIBRARY:PATH=\"-F /System/Library/Frameworks -framework Python\" -DCMAKE_INSTALL_PREFIX:PATH=%s -DBUILD_SHARED:BOOL=OFF -DBUILD_STATIC:BOOL=ON -DBUILD_MULTI_THREADED:BOOL=ON -DBUILD_DEBUG:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DCMAKE_C_COMPILER:PATH=%s -DCMAKE_CXX_COMPILER:PATH=%s -DCMAKE_OSX_ARCHITECTURES:STRING=\"i386;x86_64\" -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=\"%s\" -DCMAKE_OSX_SYSROOT:PATH=/Developer/SDKs/MacOSX%s.sdk -DBUILD_BCP:BOOL=OFF  -DBUILD_INSPECT:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DBUILD_REGRESSION_TESTS:BOOL=OFF  ." % (python_version, python_version, staging_root, gcc_path, gplusplus_path, sdk, sdk))
+
+    system_call("make -k", None, False)
     
     target_dir = "%s/lib" % (staging_root)
     
-    if(manual_lipo):
-        all_libs = os.listdir("%s/%s/lib_i386" % (staging_root, project_name))
-    else:
-        all_libs = os.listdir("%s/%s/lib" % (staging_root, project_name))
+    all_libs = os.listdir("%s/%s/lib" % (staging_root, project_name))
     
     for lib in all_libs:
         if(lib.find("libboost") == 0):
             stem = (lib.split("-mt."))[0]
-            
-            if(manual_lipo):
-                system_call("lipo -create -arch i386 %s/%s -arch x86_64 %s/%s -o %s/%s-mw.a" % (i386_dir, lib, x86_64_dir, lib, target_dir, stem))
-            else:
-                system_call("mv %s/%s/lib/%s %s/lib/%s-mw.a" % (staging_root, project_name, lib, staging_root, stem))
+            system_call("mv %s/%s/lib/%s %s/lib/%s-mw.a" % (staging_root, project_name, lib, staging_root, stem))
 
     #install the headers
     system_call("cp -r %s/%s/boost %s/include/" % (staging_root, project_name, staging_root))
@@ -294,10 +274,6 @@ copy_project("boost_1_40_0", "boost")
 
 build_boost("boost", python_version)
 
-nuke_project("zlib")
-copy_project("zlib-1.2.3", "zlib")
-lipo_gnu_build("zlib", "\.a", "", lame_config=True)
-
 nuke_project("png")
 copy_project("libpng-1.2.12", "png")
 lipo_gnu_build("png", "\.a", "--enable-static --disable-shared", lame_config=True)
@@ -313,7 +289,7 @@ lipo_gnu_build("lcms", "\.a", "--enable-static --disable-shared", lame_config=Tr
 
 nuke_project("mng")
 copy_project("libmng-1.0.10", "mng")
-lipo_gnu_build("mng", "\.a", "--enable-static --disable-shared --with-jpeg=%s/jpeg --with-lcms=%s --with-jpeg=%s --with-zlib=%s" % (staging_root, staging_root, staging_root, staging_root), lame_config=True)
+lipo_gnu_build("mng", "\.a", "--enable-static --disable-shared --with-jpeg=%s/jpeg --with-lcms=%s --with-jpeg=%s" % (staging_root, staging_root, staging_root), lame_config=True)
 
 nuke_project("tiff")
 copy_project("tiff-3.8.2", "tiff")
@@ -321,7 +297,7 @@ build_libtiff()
 
 nuke_project("devil")
 copy_project("DevIL-1.6.8", "devil")
-lipo_gnu_build("devil", "\.a", "--enable-static --disable-shared --enable-opengl --disable-directx8 --disable-directx9 --disable-win32 --disable-sdl --disable-allegro --with-tiffdir=%s --with-pngdir=%s --with-mngdir=%s --with-lcmsdir=%s --with-zdir=%s --with-jpegdir=%s" % (staging_root, staging_root, staging_root, staging_root, staging_root, staging_root), lame_config=True, environment_variables=['CPATH=%s/include' % staging_root])
+lipo_gnu_build("devil", "\.a", "--enable-static --disable-shared --enable-opengl --disable-directx8 --disable-directx9 --disable-win32 --disable-sdl --disable-allegro --with-tiffdir=%s --with-pngdir=%s --with-mngdir=%s --with-lcmsdir=%s --with-jpegdir=%s" % (staging_root, staging_root, staging_root, staging_root, staging_root), lame_config=True, environment_variables=['CPATH=%s/include' % staging_root])
 
 nuke_project("cppunit")
 copy_project("cppunit-1.12.0", "cppunit")
